@@ -1,0 +1,18 @@
+{
+    "navigationFallback": {
+      "rewrite": "index.html"
+    },
+    "routes": [ 
+      {
+        "route": "/*",
+        "serve": "/index.html",
+        "statusCode": 200
+      }
+    ],  
+    "platformErrorOverrides": [
+      {
+        "errorType": "NotFound",
+        "serve": "/404.html"
+      }
+    ]
+  }

@@ -1,0 +1,11 @@
+body {
+    min-height: 100vh !important;
+    background-color: #fff !important;
+}
+svg#header-polygon {
+    width: 100%;
+    /* set height to pixels if you want angle to change with screen width */
+    height: 10vw;
+    /* prevent the background from creeping out from the bottom on mobile*/
+    margin-bottom: -1px;
+}

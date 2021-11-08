@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 432.2 289.5" enable-background="new 0 0 432.2 289.5" xml:space="preserve">
+<pattern  x="-33.3" y="-105" width="11.5" height="11.5" patternUnits="userSpaceOnUse" id="New_Pattern" viewBox="0 -11.5 11.5 11.5" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,-11.5 11.5,-11.5 11.5,0 0,0 		"/>
+		<path fill="#939598" d="M6.5-5.8C6.5-5.3,6.2-5,5.8-5C5.3-5,5-5.3,5-5.8c0-0.4,0.3-0.8,0.8-0.8C6.2-6.5,6.5-6.2,6.5-5.8z"/>
+	</g>
+</pattern>
+<rect x="82.3" y="3.3" fill="#939598" width="236" height="11.7"/>
+<rect x="0.3" y="28.3" fill="#939598" width="266" height="147.7"/>
+<rect x="0.7" y="184.3" fill="#939598" width="92" height="9"/>
+<rect x="1" y="196.7" fill="#939598" width="72" height="6"/>
+<rect x="226.7" y="218.3" fill="#939598" width="38.7" height="13.7"/>
+<rect x="24" y="218.3" fill="#939598" width="17.7" height="6"/>
+<rect x="23.3" y="227" fill="#939598" width="39.3" height="4.7"/>
+<rect x="24.3" y="239.3" fill="#939598" width="91.7" height="5.7"/>
+<rect x="23.7" y="248.3" fill="#939598" width="59" height="6"/>
+<rect x="56.3" y="256.8" fill="#939598" width="126.5" height="6.7"/>
+<rect x="23.3" y="257.7" fill="#939598" width="30.3" height="6"/>
+<rect x="30" y="5" fill="#939598" width="25.5" height="9.3"/>
+<circle fill="#939598" cx="413.7" cy="9.3" r="8.3"/>
+<circle fill="#939598" cx="10" cy="225" r="8.3"/>
+<circle fill="#939598" cx="171.7" cy="200.3" r="4.3"/>
+<circle fill="#939598" cx="202" cy="200.3" r="4.3"/>
+<circle fill="#939598" cx="231" cy="200.3" r="4.3"/>
+<circle fill="#939598" cx="259.7" cy="200.3" r="4.3"/>
+<line fill="#939598" x1="6" y1="161" x2="260.8" y2="161"/>
+<polygon fill="#939598" points="10.6,165.6 10.6,172.3 15.9,168.6 "/>
+<polygon fill="#939598" points="25.3,166.3 25.1,171.4 29.3,168.9 "/>
+<line fill="#939598" x1="29.5" y1="171.6" x2="29.5" y2="166.3"/>
+<rect x="85.3" y="248.7" fill="#939598" width="82.3" height="6"/>
+<rect x="23.5" y="266.3" fill="#939598" width="73.2" height="5.7"/>
+<rect x="17.3" y="4.5" fill="#ED1C24" width="11.4" height="10.3"/>
+<rect id="shadow" x="280.7" y="34.3" display="none" fill="#414042" width="151.8" height="256.2"/>
+<rect id="bg" x="274.2" y="28.8" display="none" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="151.8" height="256.2"/>
+<rect id="dots" x="273.7" y="28.3" display="none" fill="url(#New_Pattern)" width="151.8" height="256.2"/>
+</svg>
