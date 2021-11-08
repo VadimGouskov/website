@@ -19,6 +19,7 @@
     "@emotion/styled": "^11.0.0",
     "@microsoft/applicationinsights-react-js": "^3.1.2",
     "@microsoft/applicationinsights-web": "^2.6.2",
+    "country-flag-icons": "^1.4.11",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
