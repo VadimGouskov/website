@@ -5,10 +5,10 @@ import Nav from "./Nav";
 const Main: React.FC = ({children}) => {
     return (
         <>
-        {/*TODO META tag*/ }
-        <Nav></Nav>
-        {children}
-        <Footer></Footer>
+            {/*TODO META tag*/}
+            <Nav></Nav>
+            {children}
+            <Footer></Footer>
         </>
     );
 };

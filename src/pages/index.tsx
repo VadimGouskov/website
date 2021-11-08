@@ -1,14 +1,7 @@
 import React from "react";
-import {ChakraProvider} from "@chakra-ui/react";
-import theme from "../styles/theme";
 
 const Index: React.FC = () => {
-    return(
-        <ChakraProvider theme={theme}>
-            <h1>Home</h1>
-        </ChakraProvider>        
-    );
-
-}
+    return <h1>Home</h1>;
+};
 
 export default Index;

@@ -1,14 +1,18 @@
-import Layout from '../components/Layout';
-import {AppProps} from 'next/app';
-import React from 'react';
-import '../styles/main.css';
+import Layout from "../components/Layout";
+import {AppProps} from "next/app";
+import {ChakraProvider} from "@chakra-ui/react";
+import theme from "../styles/theme";
+import React from "react";
+import "../styles/main.css";
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+const App: React.FC<AppProps> = ({Component, pageProps}) => {
+    return (
+        <ChakraProvider theme={theme}>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </ChakraProvider>
     );
 };
 
-export default MyApp;
+export default App;
