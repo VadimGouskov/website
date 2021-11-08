@@ -1,6 +1,14 @@
+import Layout from '../components/Layout';
 import {AppProps} from 'next/app';
+import React from 'react';
 import '../styles/main.css';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+    );
+};
+
+export default MyApp;
