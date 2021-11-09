@@ -23,6 +23,7 @@ const Skillset: React.FC<Props> = (props) => {
                     textAlign="left"
                 >
                     <Heading size="xl"> WebDev SkillSet </Heading>
+
                     <Skill title="Building WebApps" icon={Flags.US}>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius nemo dicta
                         adipisci, animi eveniet enim sed illum asperiores! Assumenda expedita
@@ -37,17 +38,37 @@ const Skillset: React.FC<Props> = (props) => {
                         exercitationem.
                     </Skill>
 
+                    <Skill title="Deploying">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius nemo dicta
+                        adipisci, animi eveniet enim sed illum asperiores! Assumenda expedita
+                        corrupti voluptatibus quo odio porro sed, a voluptate. Deserunt,
+                        exercitationem.
+                    </Skill>
+
+                    <Skill title="Streamlining">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius nemo dicta
+                        adipisci, animi eveniet enim sed illum asperiores! Assumenda expedita
+                        corrupti voluptatibus quo odio porro sed, a voluptate. Deserunt,
+                        exercitationem.
+                    </Skill>
+
+                    <Skill title="Managing deployments">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius nemo dicta
+                        adipisci, animi eveniet enim sed illum asperiores! Assumenda expedita
+                        corrupti voluptatibus quo odio porro sed, a voluptate. Deserunt,
+                        exercitationem.
+                    </Skill>
+
                     <Heading size="xl"> Other Skills </Heading>
 
-                    <Heading>Languages</Heading>
-                    <Text>{getUnicodeFlagIcon("BE")} Dutch: Native</Text>
-                    <Text>{getUnicodeFlagIcon("GB")} English: Advanced</Text>
-                    <Text>{getUnicodeFlagIcon("RU")} Russian: Intermediate </Text>
-                    <Text>{getUnicodeFlagIcon("TR")} Turkish: Beginner</Text>
+                    <Skill title="Languages">
+                        <Text>{getUnicodeFlagIcon("BE")} Dutch: Native</Text>
+                        <Text>{getUnicodeFlagIcon("GB")} English: Advanced</Text>
+                        <Text>{getUnicodeFlagIcon("RU")} Russian: Intermediate </Text>
+                        <Text>{getUnicodeFlagIcon("TR")} Turkish: Beginner (Activly studying)</Text>
+                    </Skill>
                 </Box>
             </Box>
-
-            {/* OTHER SKILLS */}
 
             {/* CALL TO ACTION */}
             <Box as="section">

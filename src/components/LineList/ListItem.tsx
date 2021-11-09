@@ -1,9 +1,18 @@
-import {Stack, Flex, Circle, Text, useColorModeValue, Heading, StackProps} from "@chakra-ui/react";
+import {
+    Stack,
+    Box,
+    Flex,
+    Circle,
+    Text,
+    useColorModeValue,
+    Heading,
+    StackProps,
+} from "@chakra-ui/react";
 import * as React from "react";
 
 export interface ListItemProps extends StackProps {
     title: string;
-    subTitle: string;
+    subTitle?: string;
     icon?: React.ReactElement;
     isLastItem?: boolean;
 }
@@ -34,7 +43,13 @@ export const ListItem: React.FC<ListItemProps> = (props) => {
                         {subTitle}
                     </Text>
                 </Flex>
-                <Flex>{children}</Flex>
+                <Flex>
+                    <Box bg={"gray.50"} width="full" rounded="xl" p="3">
+                        <Text fontSize="md" textColor="gray.800">
+                            {children}
+                        </Text>
+                    </Box>
+                </Flex>
             </Stack>
         </Stack>
     );
