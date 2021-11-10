@@ -1,7 +1,9 @@
 import {Box, Button, Heading, Stack, Text, LightMode} from "@chakra-ui/react";
 import * as React from "react";
+import {useTranslation} from "next-i18next";
 
 const Hero: React.FC = () => {
+    const {t} = useTranslation("common");
     return (
         <Box>
             <Box as="section" bg="gray.800" color="white" py="7.5rem">
@@ -21,6 +23,7 @@ const Hero: React.FC = () => {
                         <Text fontSize="2xl" mt="4" maxW="xl" mx="auto">
                             Web Developer &bull; Creative Coder &bull; Creator of Otli.io
                         </Text>
+                        <Text>{t("test")}</Text>
                     </Box>
 
                     <Stack

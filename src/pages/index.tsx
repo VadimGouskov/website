@@ -1,6 +1,8 @@
 import Hero from "../components/Hero";
 import React from "react";
 import Feature from "../components/Feature";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {GetStaticPropsResult} from "next";
 
 const Index: React.FC = () => {
     return (
@@ -35,3 +37,12 @@ const Index: React.FC = () => {
 };
 
 export default Index;
+
+export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common"])),
+            // Will be passed to the page component as props
+        },
+    };
+}
