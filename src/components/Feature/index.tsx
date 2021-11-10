@@ -13,11 +13,13 @@ import {BsArrowRight} from "react-icons/bs";
 type FeatureProps = {
     imageSrc: string;
     title: string;
+    alt: string;
     text: string;
     buttonText: string;
+    reverse?: boolean;
 };
 
-const FeatureSection: React.FC<FeatureProps> = ({imageSrc, title, text, buttonText}) => {
+const FeatureSection: React.FC<FeatureProps> = (props) => {
     return (
         <Box as="section" py={{md: "12"}}>
             <Box
@@ -28,9 +30,18 @@ const FeatureSection: React.FC<FeatureProps> = ({imageSrc, title, text, buttonTe
                 py={{base: "12", md: "20"}}
             >
                 <SimpleGrid columns={{base: 1, md: 2}} spacing="10">
+                    <Img
+                        htmlWidth="500px"
+                        htmlHeight="320px"
+                        height={{md: "320px"}}
+                        objectFit="cover"
+                        src={props.imageSrc}
+                        alt="state of the art speaker"
+                        order={[0, !!props.reverse ? 1 : 0]}
+                    />
                     <Box>
                         <Heading size="xl" mb="4" fontWeight="extrabold">
-                            {title}
+                            {props.title}
                         </Heading>
                         <Text
                             fontSize={{md: "lg"}}
@@ -38,7 +49,7 @@ const FeatureSection: React.FC<FeatureProps> = ({imageSrc, title, text, buttonTe
                             maxW="md"
                             color={mode("gray.600", "gray.400")}
                         >
-                            {text}
+                            {props.text}
                         </Text>
                         <Button
                             size="lg"
@@ -48,17 +59,9 @@ const FeatureSection: React.FC<FeatureProps> = ({imageSrc, title, text, buttonTe
                             fontSize="md"
                             w={{base: "full", sm: "auto"}}
                         >
-                            {buttonText}
+                            {props.buttonText}
                         </Button>
                     </Box>
-                    <Img
-                        htmlWidth="500px"
-                        htmlHeight="320px"
-                        height={{md: "320px"}}
-                        objectFit="cover"
-                        src={imageSrc}
-                        alt="state of the art speaker"
-                    />
                 </SimpleGrid>
             </Box>
         </Box>
