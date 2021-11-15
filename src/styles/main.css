@@ -1,11 +1,17 @@
 body {
     min-height: 100vh !important;
     background-color: #fff !important;
+    overflow-x: hidden;
 }
-svg#header-polygon {
+
+.spacer-svg {
+    aspect-ratio: 960/360;
     width: 100%;
-    /* set height to pixels if you want angle to change with screen width */
-    height: 10vw;
-    /* prevent the background from creeping out from the bottom on mobile*/
-    margin-bottom: -1px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-svg {
+    background-image: url("/assets/hero-wave.svg");
 }

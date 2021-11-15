@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
     return (
         <>
             <Box>
-                <Box as="section" bg="gray.800" color="white" py="7.5rem">
+                <Box as="section" bg="black" color="white" py="7.5rem">
                     <Box maxW={{base: "xl", md: "5xl"}} mx="auto" px={{base: "6", md: "8"}}>
                         <Box textAlign="center">
                             <Heading
@@ -28,42 +28,10 @@ const Hero: React.FC = () => {
                                 {t("HERO_TITLE_CREATOR_OTLI")}
                             </Text>
                         </Box>
-
-                        <Stack
-                            justify="center"
-                            direction={{base: "column", md: "row"}}
-                            mt="10"
-                            mb="20"
-                            spacing="4"
-                        >
-                            <LightMode>
-                                <Button
-                                    as="a"
-                                    href="#"
-                                    size="lg"
-                                    colorScheme="blue"
-                                    px="8"
-                                    fontWeight="bold"
-                                    fontSize="md"
-                                >
-                                    Get started free
-                                </Button>
-                                <Button
-                                    as="a"
-                                    href="#"
-                                    size="lg"
-                                    colorScheme="whiteAlpha"
-                                    px="8"
-                                    fontWeight="bold"
-                                    fontSize="md"
-                                >
-                                    Request demo
-                                </Button>
-                            </LightMode>
-                        </Stack>
                     </Box>
                 </Box>
             </Box>
+            <Box className="spacer-svg hero-svg"></Box>
         </>
     );
 };
