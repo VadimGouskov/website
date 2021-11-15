@@ -49,7 +49,7 @@ const Skillset: React.FC<Props> = (props) => {
 
                     <Heading size="xl"> {t("OTHER_HEADING")} </Heading>
 
-                    <Skill title="Languages">
+                    <Skill title={t("OTHER_LANGUAGES_TITLE")}>
                         <Text>
                             {getUnicodeFlagIcon("BE")} {t("OTHER_LANGUAGES_DUTCH")} Dutch: native
                         </Text>
