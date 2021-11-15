@@ -20,7 +20,7 @@ const Nav: React.FC = () => {
         <Box /* minH="24rem" bg={mode("gray.50", "gray.700")}*/>
             <Navbar>
                 <Navbar.Brand>
-                    <Center marginEnd="10">
+                    <Center margin="5">
                         <Logo h="6" iconColor={mode("blue.600", "blue.300")} />
                     </Center>
                 </Navbar.Brand>

@@ -5,46 +5,43 @@ import {FaGraduationCap} from "react-icons/fa";
 import {Box, Icon, Text} from "@chakra-ui/react";
 import {List} from "./List";
 import {ListItem} from "./ListItem";
+import {useTranslation} from "next-i18next";
 
 export const LineList: React.FC = () => {
+    const {t} = useTranslation("skillset");
+
     return (
         <Box as="section">
             <Box maxW="2xl" mx="auto" p={{base: "4", md: "8"}}>
                 <List spacing="12">
                     <ListItem
-                        title="2019 | Graduated as Master of Science in Industrial Engineering ICT"
+                        title={t("TIMELINE_UNIVERSITY_TITLE")}
                         icon={<Icon as={FaGraduationCap} boxSize="6" />}
                     >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-                        similique nostrum nihil ipsa, doloribus neque deserunt amet voluptas commodi
-                        consectetur voluptate fugiat corrupti, consequuntur itaque expedita dolorem
-                        rerum perferendis libero!
+                        {t("TIMELINE_UNIVERSITY_TEXT")}
                     </ListItem>
                     <ListItem
-                        title="2019 - 2021 | Web developer at Delen Private Bank"
+                        title={t("TIMELINE_DELEN_TITLE")}
                         icon={<Icon as={AiOutlineWoman} boxSize="6" />}
                     >
+                        {t("TIMELINE_DELEN_TEXT")}
                         large projects, angular, dotnet, full development and deployment process,...
                         teamwork, work closesly with designers and business
                     </ListItem>
                     <ListItem
-                        title="2021 - 2022 | training, projects ..."
+                        title={t("TIMLINE_TRAINING_TITLE") + "2021 - 2022 | training, projects ..."}
                         icon={<Icon as={AiOutlineSketch} boxSize="6" />}
                     >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-                        similique nostrum nihil ipsa, doloribus neque deserunt amet voluptas commodi
-                        consectetur voluptate fugiat corrupti, consequuntur itaque expedita dolorem
-                        rerum perferendis libero!
+                        {t("TIMLINE_TRAINING_TEXT")}
                     </ListItem>
 
                     <ListItem
-                        title="2022 | New exciting projects with you?"
+                        title={
+                            t("TIMELINE_FUTURE_TITLE") + "2022 | New exciting projects with you?"
+                        }
                         icon={<Icon as={AiOutlineSketch} boxSize="6" />}
                     >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-                        similique nostrum nihil ipsa, doloribus neque deserunt amet voluptas commodi
-                        consectetur voluptate fugiat corrupti, consequuntur itaque expedita dolorem
-                        rerum perferendis libero!
+                        {t("TIMELINE_FUTURE_TEXT")}
                     </ListItem>
                 </List>
             </Box>

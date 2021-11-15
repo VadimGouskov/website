@@ -3,6 +3,8 @@ import {Box, Center, Heading, VStack} from "@chakra-ui/react";
 import * as React from "react";
 import BioLinkList from "../components/BioLink/BioLinkList";
 import {SocialMediaLinks} from "../components/Footer/SocialMediaLinks";
+import {GetStaticPropsResult} from "next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 interface Props {}
 
@@ -23,3 +25,11 @@ const Bio: React.FC<Props> = (props) => {
 };
 
 export default Bio;
+
+export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["links"])),
+        },
+    };
+}

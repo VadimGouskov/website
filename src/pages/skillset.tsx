@@ -4,10 +4,15 @@ import {Box, Heading, Text, Button, UnorderedList, ListItem, Icon} from "@chakra
 import Flags from "country-flag-icons/react/3x2";
 import getUnicodeFlagIcon from "country-flag-icons/unicode";
 import Skill from "../components/Skillset/Skill";
+import {GetStaticPropsResult} from "next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 interface Props {}
 
 const Skillset: React.FC<Props> = (props) => {
+    const {t} = useTranslation("skillset");
+
     return (
         <>
             {/* TIMELINE */}
@@ -22,50 +27,44 @@ const Skillset: React.FC<Props> = (props) => {
                     py={{base: "16", sm: "20"}}
                     textAlign="left"
                 >
-                    <Heading size="xl"> WebDev SkillSet </Heading>
+                    <Heading size="xl">{t("WEBDEV_HEADING")}</Heading>
 
-                    <Skill title="Building WebApps" icon={Flags.US}>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius nemo dicta
-                        adipisci, animi eveniet enim sed illum asperiores! Assumenda expedita
-                        corrupti voluptatibus quo odio porro sed, a voluptate. Deserunt,
-                        exercitationem.
+                    <Skill title={t("WEBDEV_BUILDING_WEBAPPS_TITLE")} icon={Flags.US}>
+                        {t("WEBDEV_BUILDING_WEBAPPS_TEXT")}
                     </Skill>
 
-                    <Skill title="Styling">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius nemo dicta
-                        adipisci, animi eveniet enim sed illum asperiores! Assumenda expedita
-                        corrupti voluptatibus quo odio porro sed, a voluptate. Deserunt,
-                        exercitationem.
+                    <Skill title={t("WEBDEV_STYLING_TITLE")}>{t("WEBDEV_STYLING_TEXT")}</Skill>
+
+                    <Skill title={t("WEBDEV_DEVPLOYING_TITLE")}>
+                        {t("WEBDEV_DEVPLOYING_TEXT")}
                     </Skill>
 
-                    <Skill title="Deploying">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius nemo dicta
-                        adipisci, animi eveniet enim sed illum asperiores! Assumenda expedita
-                        corrupti voluptatibus quo odio porro sed, a voluptate. Deserunt,
-                        exercitationem.
+                    <Skill title={t("WEBDEV_STREAMLINING_DEVELOPMENT_TITLE")}>
+                        {t("WEBDEV_STREAMLINING_DEVELOPMENT_TEXT")}
                     </Skill>
 
-                    <Skill title="Streamlining">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius nemo dicta
-                        adipisci, animi eveniet enim sed illum asperiores! Assumenda expedita
-                        corrupti voluptatibus quo odio porro sed, a voluptate. Deserunt,
-                        exercitationem.
+                    <Skill title={t("WEBDEV_MANAGING_DEPLOYMENTS_TITLE")}>
+                        {t("WEBDEV_MANAGING_DEPLOYMENTS_TEXT")}
                     </Skill>
 
-                    <Skill title="Managing deployments">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius nemo dicta
-                        adipisci, animi eveniet enim sed illum asperiores! Assumenda expedita
-                        corrupti voluptatibus quo odio porro sed, a voluptate. Deserunt,
-                        exercitationem.
-                    </Skill>
-
-                    <Heading size="xl"> Other Skills </Heading>
+                    <Heading size="xl"> {t("OTHER_HEADING")} </Heading>
 
                     <Skill title="Languages">
-                        <Text>{getUnicodeFlagIcon("BE")} Dutch: Native</Text>
-                        <Text>{getUnicodeFlagIcon("GB")} English: Advanced</Text>
-                        <Text>{getUnicodeFlagIcon("RU")} Russian: Intermediate </Text>
-                        <Text>{getUnicodeFlagIcon("TR")} Turkish: Beginner (Activly studying)</Text>
+                        <Text>
+                            {getUnicodeFlagIcon("BE")} {t("OTHER_LANGUAGES_DUTCH")} Dutch: native
+                        </Text>
+                        <Text>
+                            {getUnicodeFlagIcon("GB")} {t("OTHER_LANGUAGES_ENGLISH")} English:
+                            Advanced
+                        </Text>
+                        <Text>
+                            {getUnicodeFlagIcon("RU")} {t("OTHER_LANGUAGES_RUSSIAN")} Russian:
+                            Intermediate{" "}
+                        </Text>
+                        <Text>
+                            {getUnicodeFlagIcon("TR")} {t("OTHER_LANGUAGES_TURKISH")} Turkish:
+                            Beginner (Activly studying)
+                        </Text>
                     </Skill>
                 </Box>
             </Box>
@@ -96,3 +95,11 @@ const Skillset: React.FC<Props> = (props) => {
 };
 
 export default Skillset;
+
+export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["skillset"])),
+        },
+    };
+}
