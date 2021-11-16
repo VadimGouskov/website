@@ -25,20 +25,16 @@ export const LineList: React.FC = () => {
                         icon={<Icon as={AiOutlineWoman} boxSize="6" />}
                     >
                         {t("TIMELINE_DELEN_TEXT")}
-                        large projects, angular, dotnet, full development and deployment process,...
-                        teamwork, work closesly with designers and business
                     </ListItem>
                     <ListItem
-                        title={t("TIMLINE_TRAINING_TITLE") + "2021 - 2022 | training, projects ..."}
+                        title={t("TIMLINE_TRAINING_TITLE")}
                         icon={<Icon as={AiOutlineSketch} boxSize="6" />}
                     >
                         {t("TIMLINE_TRAINING_TEXT")}
                     </ListItem>
 
                     <ListItem
-                        title={
-                            t("TIMELINE_FUTURE_TITLE") + "2022 | New exciting projects with you?"
-                        }
+                        title={t("TIMELINE_FUTURE_TITLE")}
                         icon={<Icon as={AiOutlineSketch} boxSize="6" />}
                     >
                         {t("TIMELINE_FUTURE_TEXT")}

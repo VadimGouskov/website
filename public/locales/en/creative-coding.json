@@ -1,12 +1,10 @@
 {
-    "CREATIVE_CODING_HEADING": "" ,
-    "CREATIVE_CODING_TEXT": "", 
-    "POST_INSTAGRAM_TITLE": "" ,
-    "POST_INSTAGRAM_TEXT": "" ,
-    "POST_P5_TYPESCRIPT_STARTER_TITLE": "",
-    "POST_P5_TYPESCRIPT_STARTER_TEXT": "",
-    "POST_P5_SOURCE_CODE_TITLE": "",
-    "POST_P5_SOURCE_CODE_TEXT": "",
-    "POST_P5_FILE_SERVER_TITLE": "",
-    "POST_P5_FILE_SERVER_TEXT": ""
+    "CREATIVE_CODING_HEADING": "Creative Coding" ,
+    "CREATIVE_CODING_TEXT": "Using the flexibility of writing custom software to create visual, auditory or other experiences is classified as Creative Coding. The result of this creative and technical process is called Generative Artwork.\nOne ", 
+    "POST_INSTAGRAM_TITLE": "Generative Art collection" ,
+    "POST_INSTAGRAM_TEXT": "My Instagram account where I post my finished artwork and creative process videos. Follow me there to stay updated." ,
+    "POST_P5_TYPESCRIPT_STARTER_TITLE": "P5.js Starter Project",
+    "POST_P5_TYPESCRIPT_STARTER_TEXT": "A template project to quickly run P5.js sketches with Typescript, WebPack, Live Reloading, esLint and Prettier",
+    "POST_P5_SOURCE_CODE_TITLE": "Generative Artwork Source Code",
+    "POST_P5_SOURCE_CODE_TEXT": "A collection of the code behind the designs. Feel free to use any code in this repository or contact me for questions or suggestions."
 }

@@ -49,7 +49,7 @@ const PostCard: React.FC<Props> = (props) => {
                     <Heading as="h3" size="sm" mb="2" lineHeight="base">
                         <LinkOverlay href={href}>{title}</LinkOverlay>
                     </Heading>
-                    <Text noOfLines={2} mb="8" color="gray.600">
+                    <Text noOfLines={4} mb="8" color="gray.600">
                         {description}
                     </Text>
                 </Flex>

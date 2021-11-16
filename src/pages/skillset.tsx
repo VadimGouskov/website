@@ -35,36 +35,35 @@ const Skillset: React.FC<Props> = (props) => {
 
                     <Skill title={t("WEBDEV_STYLING_TITLE")}>{t("WEBDEV_STYLING_TEXT")}</Skill>
 
-                    <Skill title={t("WEBDEV_DEVPLOYING_TITLE")}>
-                        {t("WEBDEV_DEVPLOYING_TEXT")}
-                    </Skill>
+                    <Skill title={t("WEBDEV_DEPLOYING_TITLE")}>{t("WEBDEV_DEPLOYING_TEXT")}</Skill>
 
                     <Skill title={t("WEBDEV_STREAMLINING_DEVELOPMENT_TITLE")}>
                         {t("WEBDEV_STREAMLINING_DEVELOPMENT_TEXT")}
                     </Skill>
 
-                    <Skill title={t("WEBDEV_MANAGING_DEPLOYMENTS_TITLE")}>
-                        {t("WEBDEV_MANAGING_DEPLOYMENTS_TEXT")}
+                    <Skill title={t("WEBDEV_BROWSER_EXTENSIONS_TITLE")} icon={Flags.US}>
+                        {t("WEBDEV_BROWSER_EXTENSIONS_TEXT")}
                     </Skill>
 
                     <Heading size="xl"> {t("OTHER_HEADING")} </Heading>
 
                     <Skill title={t("OTHER_LANGUAGES_TITLE")}>
                         <Text>
-                            {getUnicodeFlagIcon("BE")} {t("OTHER_LANGUAGES_DUTCH")} Dutch: native
+                            {getUnicodeFlagIcon("BE")} {t("OTHER_LANGUAGES_DUTCH")}
                         </Text>
                         <Text>
-                            {getUnicodeFlagIcon("GB")} {t("OTHER_LANGUAGES_ENGLISH")} English:
-                            Advanced
+                            {getUnicodeFlagIcon("GB")} {t("OTHER_LANGUAGES_ENGLISH")}
                         </Text>
                         <Text>
-                            {getUnicodeFlagIcon("RU")} {t("OTHER_LANGUAGES_RUSSIAN")} Russian:
-                            Intermediate{" "}
+                            {getUnicodeFlagIcon("RU")} {t("OTHER_LANGUAGES_RUSSIAN")}
                         </Text>
                         <Text>
-                            {getUnicodeFlagIcon("TR")} {t("OTHER_LANGUAGES_TURKISH")} Turkish:
-                            Beginner (Activly studying)
+                            {getUnicodeFlagIcon("TR")} {t("OTHER_LANGUAGES_TURKISH")}
                         </Text>
+                    </Skill>
+
+                    <Skill title={t("OTHER_TECHNICAL_COMMUNICATION_TITLE")}>
+                        {t("OTHER_TECHNICAL_COMMUNICATION_TEXT")}
                     </Skill>
                 </Box>
             </Box>
