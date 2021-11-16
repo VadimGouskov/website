@@ -5,7 +5,7 @@ body {
 }
 
 .spacer-svg {
-    aspect-ratio: 960/360;
+    aspect-ratio: 960/50;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;

@@ -19,8 +19,8 @@ export const NavLink: React.FC<NavLinkProps> = ({href, isActive, ...rest}) => {
                 color="white"
                 _hover={{bg: "white", color: "black"}}
                 _activeLink={{
-                    bg: "blue.200",
-                    color: "gray.800",
+                    bg: "white",
+                    color: "black",
                 }}
                 {...rest}
             />

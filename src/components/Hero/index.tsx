@@ -1,13 +1,14 @@
 import {Box, Button, Heading, Stack, Text, LightMode} from "@chakra-ui/react";
 import {useTranslation} from "next-i18next";
 import * as React from "react";
+import {WaveSpacer} from "../Common/WaveSpacer";
 
 const Hero: React.FC = () => {
     const {t} = useTranslation("index");
 
     return (
         <>
-            <Box>
+            <Box transform="translate(0px, -100px)">
                 <Box as="section" bg="black" color="white" py="7.5rem">
                     <Box maxW={{base: "xl", md: "5xl"}} mx="auto" px={{base: "6", md: "8"}}>
                         <Box textAlign="center">
@@ -30,8 +31,8 @@ const Hero: React.FC = () => {
                         </Box>
                     </Box>
                 </Box>
+                <WaveSpacer></WaveSpacer>
             </Box>
-            <Box className="spacer-svg hero-svg"></Box>
         </>
     );
 };

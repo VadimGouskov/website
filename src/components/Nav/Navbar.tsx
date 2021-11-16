@@ -17,11 +17,13 @@ export const Template: React.FC = (props) => {
     const mobileNav = useDisclosure();
     return (
         <Flex
-            py={4}
+            p={4}
             px={{base: 4, md: 6, lg: 8}}
             bg={useColorModeValue("black", "white")}
             boxShadow={useColorModeValue("md", "none")}
             borderBottomWidth={useColorModeValue("none", "1px")}
+            pos="relative"
+            zIndex={10}
         >
             {children.find((child) => child.type === Brand)?.props.children}
 

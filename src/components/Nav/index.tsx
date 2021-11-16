@@ -4,6 +4,7 @@ import {Navbar} from "./Navbar";
 import {NavLink} from "./NavLink";
 import {UserProfile} from "./UserProfile";
 import {useRouter} from "next/router";
+import {WaveSpacer} from "../Common/WaveSpacer";
 
 const Nav: React.FC = () => {
     const SKILLSET_PATH = "skillset";
@@ -39,6 +40,7 @@ const Nav: React.FC = () => {
                     />
                 </Navbar.UserProfile>
             </Navbar>
+            <WaveSpacer offsetY={-40} />
         </Box>
     );
 };
