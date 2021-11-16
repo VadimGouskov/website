@@ -16,10 +16,11 @@ export const NavLink: React.FC<NavLinkProps> = ({href, isActive, ...rest}) => {
                 fontWeight="medium"
                 lineHeight="1.25rem"
                 aria-current={isActive ? "page" : undefined}
-                _hover={{bg: mode("gray.100", "gray.700")}}
+                color="white"
+                _hover={{bg: "white", color: "black"}}
                 _activeLink={{
-                    bg: mode("blue.600", "blue.200"),
-                    color: mode("white", "gray.900"),
+                    bg: "blue.200",
+                    color: "gray.800",
                 }}
                 {...rest}
             />

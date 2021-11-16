@@ -1,6 +1,6 @@
-import {BellIcon} from "@chakra-ui/icons";
-import {Flex, IconButton, HStack, Avatar, Text} from "@chakra-ui/react";
+import {Flex, Icon, HStack, Avatar} from "@chakra-ui/react";
 import * as React from "react";
+import Flags from "country-flag-icons/react/3x2";
 
 interface Props {
     name: string;
@@ -9,29 +9,28 @@ interface Props {
 }
 
 export const UserProfile: React.FC<Props> = (props) => {
-    const {name, email, avatarUrl} = props;
+    const FLAG_SIZE = 8;
     return (
         <>
-            <Flex order={{base: 2, md: 1}}>
-                <IconButton
-                    isRound
-                    size="sm"
-                    fontSize="xl"
-                    aria-label="Show notification"
-                    variant="ghost"
-                    color="current"
-                    icon={<BellIcon />}
-                />
-            </Flex>
-            <HStack spacing={3} order={{base: 1, md: 2}} flex="1">
-                <Avatar name={name} src={avatarUrl} size="sm" />
-                <Flex direction="column" display={{base: "flex", md: "none"}}>
-                    <Text fontWeight="bold" lineHeight="shorter">
-                        {name}
-                    </Text>
-                    <Text fontSize="sm" lineHeight="shorter" opacity={0.7}>
-                        {email}
-                    </Text>
+            <HStack
+                spacing={3}
+                order={{base: 1, md: 2}}
+                flex="1"
+                bg="white"
+                p="2"
+                borderRadius="lg"
+            >
+                <Flex direction="column">
+                    <Icon w={FLAG_SIZE} h={FLAG_SIZE} as={Flags.GB}></Icon>
+                </Flex>
+                <Flex direction="column">
+                    <Icon w={FLAG_SIZE} h={FLAG_SIZE} as={Flags.BE}></Icon>
+                </Flex>
+                <Flex direction="column">
+                    <Icon w={FLAG_SIZE} h={FLAG_SIZE} as={Flags.RU}></Icon>
+                </Flex>
+                <Flex direction="column">
+                    <Icon w={FLAG_SIZE} h={FLAG_SIZE} as={Flags.TR}></Icon>
                 </Flex>
             </HStack>
         </>

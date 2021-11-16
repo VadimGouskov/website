@@ -9,7 +9,6 @@ interface Props {
 
 export const MobileNavContent: React.FC<Props> = (props) => {
     const {isOpen, onClose, children} = props;
-    const bg = useColorModeValue("white", "gray.800");
     return (
         <AnimatePresence>
             {isOpen && (
@@ -22,7 +21,8 @@ export const MobileNavContent: React.FC<Props> = (props) => {
                     <Flex
                         direction="column"
                         w="100%"
-                        bg={bg}
+                        bg="black"
+                        color="white"
                         h="100vh"
                         overflow="auto"
                         pos="absolute"

@@ -1,6 +1,5 @@
 import {Box, Center, useColorModeValue as mode} from "@chakra-ui/react";
 import * as React from "react";
-import {Logo} from "./Logo";
 import {Navbar} from "./Navbar";
 import {NavLink} from "./NavLink";
 import {UserProfile} from "./UserProfile";
@@ -17,13 +16,9 @@ const Nav: React.FC = () => {
     };
 
     return (
-        <Box /* minH="24rem" bg={mode("gray.50", "gray.700")}*/>
+        <Box>
             <Navbar>
-                <Navbar.Brand>
-                    <Center margin="5">
-                        <Logo h="6" iconColor={mode("blue.600", "blue.300")} />
-                    </Center>
-                </Navbar.Brand>
+                <Navbar.Brand></Navbar.Brand>
                 <Navbar.Links>
                     <NavLink href="/">Home</NavLink>
                     <NavLink isActive={getIsActive(SKILLSET_PATH)} href={SKILLSET_PATH}>
