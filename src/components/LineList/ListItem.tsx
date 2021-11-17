@@ -44,8 +44,8 @@ export const ListItem: React.FC<ListItemProps> = (props) => {
                     </Text>
                 </Flex>
                 <Flex>
-                    <Box bg={"gray.50"} width="full" rounded="xl" p="3">
-                        <Text fontSize="md" textColor="gray.800">
+                    <Box bg="gray.50" width="full" rounded="2xl" p="4">
+                        <Text fontSize="lg" textColor="gray.800">
                             {children}
                         </Text>
                     </Box>

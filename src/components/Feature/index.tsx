@@ -17,6 +17,7 @@ type FeatureProps = {
     text: string;
     buttonText: string;
     reverse?: boolean;
+    imageAlt?: string;
 };
 
 const FeatureSection: React.FC<FeatureProps> = (props) => {
@@ -36,7 +37,7 @@ const FeatureSection: React.FC<FeatureProps> = (props) => {
                         height={{md: "320px"}}
                         objectFit="cover"
                         src={props.imageSrc}
-                        alt="state of the art speaker"
+                        alt={props.imageAlt}
                         order={[0, !!props.reverse ? 1 : 0]}
                     />
                     <Box>
@@ -44,10 +45,10 @@ const FeatureSection: React.FC<FeatureProps> = (props) => {
                             {props.title}
                         </Heading>
                         <Text
-                            fontSize={{md: "lg"}}
+                            fontSize={{md: "xl"}}
                             mb="6"
                             maxW="md"
-                            color={mode("gray.600", "gray.400")}
+                            color={mode("gray.800", "gray.400")}
                         >
                             {props.text}
                         </Text>
