@@ -7,6 +7,7 @@ import Skill from "../components/Skillset/Skill";
 import {GetStaticPropsResult} from "next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
+import Emoji from "@/components/Common/Emoji";
 
 interface Props {}
 
@@ -18,7 +19,7 @@ const Skillset: React.FC<Props> = (props) => {
             {/* TIMELINE */}
             <LineList></LineList>
 
-            {/* SKILLSET */}
+            {/* SKILL SET */}
             <Box as="section">
                 <Box
                     maxW="2xl"
@@ -29,19 +30,31 @@ const Skillset: React.FC<Props> = (props) => {
                 >
                     <Heading size="xl">{t("WEBDEV_HEADING")}</Heading>
 
-                    <Skill title={t("WEBDEV_BUILDING_WEBAPPS_TITLE")} icon={Flags.US}>
+                    <Skill title={t("WEBDEV_BUILDING_WEBAPPS_TITLE")} emoji="⚙️" emojiLabel="gear">
                         {t("WEBDEV_BUILDING_WEBAPPS_TEXT")}
                     </Skill>
 
-                    <Skill title={t("WEBDEV_STYLING_TITLE")}>{t("WEBDEV_STYLING_TEXT")}</Skill>
+                    <Skill title={t("WEBDEV_STYLING_TITLE")} emoji="🖌️" emojiLabel="brush">
+                        {t("WEBDEV_STYLING_TEXT")}
+                    </Skill>
 
-                    <Skill title={t("WEBDEV_DEPLOYING_TITLE")}>{t("WEBDEV_DEPLOYING_TEXT")}</Skill>
+                    <Skill title={t("WEBDEV_DEPLOYING_TITLE")} emoji="🚀" emojiLabel="rocket">
+                        {t("WEBDEV_DEPLOYING_TEXT")}
+                    </Skill>
 
-                    <Skill title={t("WEBDEV_STREAMLINING_DEVELOPMENT_TITLE")}>
+                    <Skill
+                        title={t("WEBDEV_STREAMLINING_DEVELOPMENT_TITLE")}
+                        emoji="👨‍💻"
+                        emojiLabel="man-behind-computer"
+                    >
                         {t("WEBDEV_STREAMLINING_DEVELOPMENT_TEXT")}
                     </Skill>
 
-                    <Skill title={t("WEBDEV_BROWSER_EXTENSIONS_TITLE")} icon={Flags.US}>
+                    <Skill
+                        title={t("WEBDEV_BROWSER_EXTENSIONS_TITLE")}
+                        emoji="✨"
+                        emojiLabel="sparkles"
+                    >
                         {t("WEBDEV_BROWSER_EXTENSIONS_TEXT")}
                     </Skill>
 
