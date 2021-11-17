@@ -24,11 +24,13 @@ const FeatureSection: React.FC<FeatureProps> = (props) => {
     return (
         <Box as="section" py={{md: "12"}}>
             <Box
-                bg={mode("gray.50", "gray.800")}
+                bg={mode("black", "gray.800")}
+                color={mode("white", "gray.800")}
                 maxW={{base: "xl", md: "7xl"}}
                 mx="auto"
                 px={{base: "6", md: "12", lg: "20"}}
                 py={{base: "12", md: "20"}}
+                rounded={{base: "0px", md: "30px"}}
             >
                 <SimpleGrid columns={{base: 1, md: 2}} spacing="10">
                     <Img
@@ -44,12 +46,7 @@ const FeatureSection: React.FC<FeatureProps> = (props) => {
                         <Heading size="xl" mb="4" fontWeight="extrabold">
                             {props.title}
                         </Heading>
-                        <Text
-                            fontSize={{md: "xl"}}
-                            mb="6"
-                            maxW="md"
-                            color={mode("gray.800", "gray.400")}
-                        >
+                        <Text fontSize={{md: "xl"}} mb="6" maxW="md">
                             {props.text}
                         </Text>
                         <Button

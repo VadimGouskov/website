@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
 
     return (
         <>
-            <Box transform="translate(0px, -100px)">
+            <Box transform="translate(0px, -150px)">
                 <Box as="section" bg="black" color="white" py="7.5rem">
                     <Box maxW={{base: "xl", md: "5xl"}} mx="auto" px={{base: "6", md: "8"}}>
                         <Box textAlign="center">

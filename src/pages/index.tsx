@@ -4,6 +4,8 @@ import Feature from "../components/Feature";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {GetStaticPropsResult} from "next";
 import {useTranslation} from "next-i18next";
+import BlobFeature from "../components/Feature/BlobFeature";
+import {Img} from "@chakra-ui/react";
 
 const Index: React.FC = () => {
     const {t} = useTranslation("index");
@@ -11,30 +13,52 @@ const Index: React.FC = () => {
     return (
         <>
             <Hero></Hero>
-            <Feature
+
+            <BlobFeature
                 title={t("FEATURE_WEB_DEVELOPMENT_TITLE")}
                 text={t("FEATURE_WEB_DEVELOPMENT_TEXT")}
-                alt="TODO"
                 buttonText={t("FEATURE_WEB_DEVELOPMENT_BUTTON")}
-                imageSrc="https://images.unsplash.com/photo-1534949752991-a065b0f5dfaa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTYxfHxkZXZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-            ></Feature>
+            >
+                <Img
+                    htmlWidth="500px"
+                    htmlHeight="320px"
+                    height={{md: "320px"}}
+                    objectFit="cover"
+                    src="https://images.unsplash.com/photo-1534949752991-a065b0f5dfaa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTYxfHxkZXZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                    alt="TODO"
+                />
+            </BlobFeature>
 
-            <Feature
+            <BlobFeature
                 reverse
                 title={t("FEATURE_CREATIVE_CODING_TITLE")}
                 text={t("FEATURE_CREATIVE_CODING_TEXT")}
-                alt="TODO"
                 buttonText={t("FEATURE_CREATIVE_CODING_BUTTON")}
-                imageSrc="https://images.unsplash.com/photo-1534949752991-a065b0f5dfaa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTYxfHxkZXZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-            ></Feature>
+            >
+                <Img
+                    htmlWidth="500px"
+                    htmlHeight="320px"
+                    height={{md: "320px"}}
+                    objectFit="cover"
+                    src="https://images.unsplash.com/photo-1534949752991-a065b0f5dfaa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTYxfHxkZXZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                    alt="TODO"
+                />
+            </BlobFeature>
 
-            <Feature
+            <BlobFeature
                 title={t("FEATURE_OTLI_TITLE")}
                 text={t("FEATURE_OTLI_TEXT")}
-                alt="TODO"
                 buttonText={t("FEATURE_OTLI_BUTTON")}
-                imageSrc="https://images.unsplash.com/photo-1534949752991-a065b0f5dfaa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTYxfHxkZXZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-            ></Feature>
+            >
+                <Img
+                    htmlWidth="500px"
+                    htmlHeight="320px"
+                    height={{md: "320px"}}
+                    objectFit="cover"
+                    src="https://images.unsplash.com/photo-1534949752991-a065b0f5dfaa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTYxfHxkZXZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                    alt="TODO"
+                />
+            </BlobFeature>
         </>
     );
 };
