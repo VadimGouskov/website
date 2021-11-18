@@ -24,7 +24,13 @@ const Index: React.FC = () => {
                     <WebIcon imgSrc="assets/react-logo.svg" />
                     <WebIcon imgSrc="assets/nextjs-logo.svg" offsetX="50%" />
                     <WebIcon imgSrc="assets/nodejs-logo.svg" offsetY="50%" />
-                    <WebIcon imgSrc="assets/typescript-logo.svg" offsetX="50%" offsetY="50%" />
+                    <WebIcon
+                        imgSrc="assets/typescript-logo.svg"
+                        offsetX="50%"
+                        offsetY="50%"
+                        logoWidth="85%"
+                        rounded="10%"
+                    />
                     <WebIcon imgSrc="assets/webpack-logo.svg" offsetX="25%" offsetY="100%" />
                 </Box>
             </BlobFeature>
