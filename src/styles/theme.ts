@@ -18,6 +18,14 @@ const theme = extendTheme({
         Text: {baseStyle: {fontSize: "20px"}},
         Heading: {baseStyle: {marginBottom: "spacer"}},
         Link: {baseStyle: {textDecoration: "none", fontWeight: "bold"}},
+        Button: {
+            variants:{
+                "social": {
+                    bg:"transparent",
+                    color:"white",   
+                }
+            }
+        }
     },
 });
 

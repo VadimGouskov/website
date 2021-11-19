@@ -24,6 +24,8 @@ export const Template: React.FC = (props) => {
             borderBottomWidth={useColorModeValue("none", "1px")}
             pos="relative"
             zIndex={10}
+            // HACK: remove space between this element and wave svg
+            mb="-4px"
         >
             {children.find((child) => child.type === Brand)?.props.children}
 

@@ -2,26 +2,33 @@ import {Box, Stack} from "@chakra-ui/react";
 import * as React from "react";
 import {WaveSpacer} from "../Common/WaveSpacer";
 import {Copyright} from "./Copyright";
-import {Logo} from "./Logo";
+import FooterText from "./FooterText";
 import {SocialMediaLinks} from "./SocialMediaLinks";
 
 const Footer: React.FC = () => (
     <>
-        <WaveSpacer svgName="footer-svg" offsetY="2px"></WaveSpacer>
+        <WaveSpacer svgName="footer-svg" bgColor="gray.50"></WaveSpacer>
         <Box
             as="footer"
             role="contentinfo"
             mx="auto"
             maxW="100%"
-            py="12"
+            pb="12"
             px={{base: "4", md: "8"}}
             backgroundColor="black"
             color="white"
+            // HACK: remove space between this element and wave svg
+            mt="-4px"
         >
             <Stack>
-                <Stack direction="row" spacing="4" align="center" justify="space-between">
-                    <Logo />
+                <Stack
+                    direction={{base: "column", sm: "row"}}
+                    spacing="4"
+                    align="center"
+                    justify="space-between"
+                >
                     <SocialMediaLinks />
+                    <FooterText />
                 </Stack>
                 <Copyright alignSelf={{base: "center", sm: "start"}} />
             </Stack>
