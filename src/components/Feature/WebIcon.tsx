@@ -1,9 +1,11 @@
-import {Box, Img, propNames} from "@chakra-ui/react";
+import {Box, Img, propNames, ResponsiveValue} from "@chakra-ui/react";
 import * as React from "react";
+import * as CSS from "csstype";
+
 type Props = {
     imgSrc: string;
     offsetX?: string;
-    offsetY?: string;
+    offsetY?: string | ResponsiveValue<CSS.Property.Top<string | number>>;
     logoWidth?: string;
     rounded?: string;
 };
