@@ -85,7 +85,12 @@ const Index: React.FC = () => {
                             top="66%"
                             transform="translate(-50%, -50%)"
                         ></Img>
-                        <Box pos="absolute" backgroundColor="#0000ff" width="66%" height="66%">
+                        <Box
+                            pos="absolute"
+                            backgroundColor="rgb(14, 17, 61)"
+                            width="66%"
+                            height="66%"
+                        >
                             <Img
                                 width="66%"
                                 src="assets/otli-logo-white.svg"

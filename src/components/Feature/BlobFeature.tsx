@@ -22,7 +22,7 @@ const BlobFeature: React.FC<FeatureProps> = (props) => {
     const blobSrc = "assets/blob3.svg";
 
     return (
-        <Box as="section" py={{md: "12"}}>
+        <Box as="section" mb="20" py={{md: "24"}}>
             <Box
                 bg={mode("transparent", "gray.800")}
                 color={mode("white", "gray.800")}
