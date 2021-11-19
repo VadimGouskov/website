@@ -46,7 +46,7 @@ const Index: React.FC = () => {
                     htmlHeight="320px"
                     height={{md: "320px"}}
                     objectFit="cover"
-                    src="https://images.unsplash.com/photo-1534949752991-a065b0f5dfaa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTYxfHxkZXZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                    src="assets/wave.png"
                     alt="TODO"
                 />
             </BlobFeature>
@@ -56,14 +56,36 @@ const Index: React.FC = () => {
                 text={t("FEATURE_OTLI_TEXT")}
                 buttonText={t("FEATURE_OTLI_BUTTON")}
             >
-                <Img
-                    htmlWidth="500px"
-                    htmlHeight="320px"
-                    height={{md: "320px"}}
-                    objectFit="cover"
-                    src="https://images.unsplash.com/photo-1534949752991-a065b0f5dfaa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTYxfHxkZXZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                    alt="TODO"
-                />
+                <Box position="relative" height="400px">
+                    <Img
+                        position="absolute"
+                        src="assets/otli-blip.svg"
+                        width="66%"
+                        top="16%"
+                        left="75%"
+                        transform="translate(-50%, -50%)"
+                    ></Img>
+                    <Img
+                        position="absolute"
+                        src="assets/otli-blip2.svg"
+                        width="50%"
+                        left={"-33%"}
+                        top="66%"
+                        transform="translate(-50%, -50%)"
+                    ></Img>
+                    <Box pos="absolute" backgroundColor="#0000ff" width="66%" height="66%">
+                        <Img
+                            width="66%"
+                            src="assets/otli-logo-white.svg"
+                            objectFit="contain"
+                            position="absolute"
+                            left="50%"
+                            top="50%"
+                            transform="translate(-50%, -50%)"
+                        ></Img>
+                    </Box>
+                    <Img></Img>
+                </Box>
             </BlobFeature>
         </>
     );
