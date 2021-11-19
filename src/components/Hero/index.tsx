@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
                         </Box>
                     </Box>
                 </Box>
-                <WaveSpacer></WaveSpacer>
+                <WaveSpacer svgName="hero-svg"></WaveSpacer>
             </Box>
         </>
     );

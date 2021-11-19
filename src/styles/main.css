@@ -5,13 +5,20 @@ body {
 }
 
 .spacer-svg {
-    aspect-ratio: 960/50;
+    position: relative;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    z-index: 0;
 }
 
 .hero-svg {
+    aspect-ratio: 960/50;
     background-image: url("/assets/hero-wave.svg");
+}
+
+.footer-svg {
+    aspect-ratio: 900/116;
+    background-image: url("/assets/bottom-wave.svg");
 }

@@ -1,13 +1,11 @@
-import {LineList} from "../components/LineList";
 import * as React from "react";
 import {Box, Heading, Text, Button, UnorderedList, ListItem, Icon} from "@chakra-ui/react";
-import Flags from "country-flag-icons/react/3x2";
 import getUnicodeFlagIcon from "country-flag-icons/unicode";
 import Skill from "../components/Skillset/Skill";
 import {GetStaticPropsResult} from "next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
-import Emoji from "@/components/Common/Emoji";
+import SkillBox from "../components/Skillset/SkillBox";
 
 interface Props {}
 
@@ -17,10 +15,34 @@ const Skillset: React.FC<Props> = (props) => {
     return (
         <>
             {/* TIMELINE */}
-            <LineList></LineList>
+            <Box as="section">
+                <Box
+                    maxW="2xl"
+                    mx="auto"
+                    px={{base: "6", lg: "8"}}
+                    py={{base: "16", sm: "20"}}
+                    textAlign="left"
+                >
+                    <Skill title={t("TIMELINE_UNIVERSITY_TITLE")}>
+                        <SkillBox>{t("TIMELINE_UNIVERSITY_TEXT")}</SkillBox>
+                    </Skill>
+
+                    <Skill title={t("TIMELINE_DELEN_TITLE")}>
+                        <SkillBox>{t("TIMELINE_DELEN_TEXT")} </SkillBox>
+                    </Skill>
+
+                    <Skill title={t("TIMELINE_TRAINING_TITLE")}>
+                        <SkillBox> {t("TIMELINE_TRAINING_TEXT")}</SkillBox>
+                    </Skill>
+
+                    <Skill title={t("TIMELINE_FUTURE_TITLE")}>
+                        <SkillBox>{t("TIMELINE_FUTURE_TEXT")}</SkillBox>
+                    </Skill>
+                </Box>
+            </Box>
 
             {/* SKILL SET */}
-            <Box as="section">
+            <Box as="section" backgroundColor="gray.50">
                 <Box
                     maxW="2xl"
                     mx="auto"
@@ -82,7 +104,7 @@ const Skillset: React.FC<Props> = (props) => {
             </Box>
 
             {/* CALL TO ACTION */}
-            <Box as="section">
+            <Box as="section" backgroundColor="gray.50">
                 <Box
                     maxW="2xl"
                     mx="auto"

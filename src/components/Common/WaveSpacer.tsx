@@ -4,13 +4,14 @@ import {Text, TextProps} from "@chakra-ui/layout";
 import * as React from "react";
 
 type Props = {
-    offsetY?: number;
+    svgName: string;
+    offsetY?: number | string;
 };
 
-export const WaveSpacer: React.FC<Props> = ({offsetY = -2}) => (
+export const WaveSpacer: React.FC<Props> = ({svgName, offsetY = "-2px"}) => (
     <Box
-        className="spacer-svg hero-svg"
-        transform={`translate(0px, ${offsetY}px)`}
+        className={`spacer-svg ${svgName}`}
+        transform={`translate(0px, ${offsetY})`}
         zIndex={-10}
     ></Box>
 );

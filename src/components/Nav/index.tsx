@@ -40,7 +40,7 @@ const Nav: React.FC = () => {
                     />
                 </Navbar.UserProfile>
             </Navbar>
-            <WaveSpacer offsetY={-40} />
+            <WaveSpacer svgName="hero-svg" offsetY={-40} />
         </Box>
     );
 };
