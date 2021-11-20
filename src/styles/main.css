@@ -18,7 +18,7 @@ body {
     background-image: url("/assets/hero-wave.svg");
 }
 
-.footer-svg {
+.bottom-svg {
     aspect-ratio: 900/116;
     background-image: url("/assets/bottom-wave.svg");
 }

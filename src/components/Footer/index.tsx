@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             {showSecondaryWave() && (
                 <WaveSpacer svgName="bottom-svg2" bgColor="transparent"></WaveSpacer>
             )}
-            <WaveSpacer svgName="footer-svg" bgColor="gray.50"></WaveSpacer>
+            <WaveSpacer svgName="bottom-svg" bgColor="gray.50"></WaveSpacer>
             <Box
                 as="footer"
                 role="contentinfo"
