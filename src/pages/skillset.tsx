@@ -6,6 +6,7 @@ import {GetStaticPropsResult} from "next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
 import SkillBox from "../components/Skillset/SkillBox";
+import {WaveSpacer} from "../components/Common/WaveSpacer";
 
 interface Props {}
 
@@ -42,7 +43,8 @@ const Skillset: React.FC<Props> = (props) => {
             </Box>
 
             {/* SKILL SET */}
-            <Box as="section" backgroundColor="gray.50">
+            <WaveSpacer svgName="bottom-svg2"></WaveSpacer>
+            <Box as="section" backgroundColor="gray.50" mt="-2px">
                 <Box
                     maxW="2xl"
                     mx="auto"

@@ -22,3 +22,8 @@ body {
     aspect-ratio: 900/116;
     background-image: url("/assets/bottom-wave.svg");
 }
+
+.bottom-svg2 {
+    aspect-ratio: 900/52;
+    background-image: url("/assets/bottom-wave2.svg");
+}
