@@ -81,7 +81,7 @@ const Index: React.FC = () => {
                             position="absolute"
                             src="assets/otli-blip2.svg"
                             width="50%"
-                            left={{base: "0", md: "-33%"}}
+                            left={{base: "0", md: "-20%"}}
                             top="66%"
                             transform="translate(-50%, -50%)"
                         ></Img>
