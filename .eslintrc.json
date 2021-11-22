@@ -5,8 +5,8 @@
         "browser": true
     },
     "extends": [
-        "plugin:@typescript-eslint/recommended"
-        //"plugin:@next/next/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@next/next/recommended"
     ],
     "parserOptions": {
         "project": ["./tsconfig.json", "./modules.d.ts"],
@@ -35,5 +35,5 @@
             "version": "detect"
         }
     },
-    "ignorePatterns": ["next.config.mjs"],
+    "ignorePatterns": ["next.config.mjs"]
 }
