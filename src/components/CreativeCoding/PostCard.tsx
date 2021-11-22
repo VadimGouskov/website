@@ -1,17 +1,6 @@
-import {
-    Box,
-    Flex,
-    Heading,
-    Img,
-    Link,
-    LinkBox,
-    LinkOverlay,
-    SimpleGrid,
-    Text,
-    useColorModeValue as mode,
-} from "@chakra-ui/react";
+import {Box, Flex, Heading, Img, Text, useColorModeValue as mode} from "@chakra-ui/react";
+import Link from "next/link";
 import * as React from "react";
-import {BsArrowRight, BsClockFill} from "react-icons/bs";
 
 interface Props {
     category: string;
@@ -23,38 +12,41 @@ interface Props {
 
 const PostCard: React.FC<Props> = (props) => {
     const {title, href, description, media, category} = props;
+    // TODO correctly wrap component with next/link
     return (
-        <LinkBox
-            as="article"
-            bg={{sm: mode("white", "gray.700")}}
-            shadow={{sm: "base"}}
-            rounded={{sm: "md"}}
-            overflow="hidden"
-            transition="all 0.2s"
-            _hover={{shadow: {sm: "lg"}}}
-        >
-            <Flex direction="column">
-                <Img height="60" objectFit="cover" alt={title} src={media} />
-                <Flex direction="column" px={{sm: "6"}} py="5">
-                    <Text
-                        casing="uppercase"
-                        letterSpacing="wider"
-                        fontSize="xs"
-                        fontWeight="semibold"
-                        mb="2"
-                        color="gray.500"
-                    >
-                        {category}
-                    </Text>
-                    <Heading as="h3" size="sm" mb="2" lineHeight="base">
-                        <LinkOverlay href={href}>{title}</LinkOverlay>
-                    </Heading>
-                    <Text noOfLines={4} mb="8" color="gray.600">
-                        {description}
-                    </Text>
+        <Link href={href} passHref>
+            <Box
+                as="article"
+                bg={{sm: mode("white", "gray.700")}}
+                shadow={{sm: "base"}}
+                rounded={{sm: "md"}}
+                overflow="hidden"
+                transition="all 0.2s"
+                _hover={{shadow: {sm: "lg"}, cursor: "pointer"}}
+            >
+                <Flex direction="column">
+                    <Img height="60" objectFit="cover" alt={title} src={media} />
+                    <Flex direction="column" px={{sm: "6"}} py="5">
+                        <Text
+                            casing="uppercase"
+                            letterSpacing="wider"
+                            fontSize="xs"
+                            fontWeight="semibold"
+                            mb="2"
+                            color="gray.500"
+                        >
+                            {category}
+                        </Text>
+                        <Heading as="h3" size="sm" mb="2" lineHeight="base">
+                            {title}
+                        </Heading>
+                        <Text noOfLines={4} mb="8" color="gray.600">
+                            {description}
+                        </Text>
+                    </Flex>
                 </Flex>
-            </Flex>
-        </LinkBox>
+            </Box>
+        </Link>
     );
 };
 
