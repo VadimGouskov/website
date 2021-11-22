@@ -10,23 +10,5 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
     z-index: 0;
-}
-
-.hero-svg {
-    aspect-ratio: 960/50;
-    background-image: url("/assets/hero-wave.svg");
-}
-
-.bottom-svg {
-    aspect-ratio: 900/116;
-    background-image: url("/assets/bottom-wave.svg");
-}
-
-.bottom-svg2 {
-    aspect-ratio: 900/52;
-    background-image: url("/assets/bottom-wave2.svg");
 }

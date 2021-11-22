@@ -43,7 +43,7 @@ const Skillset: React.FC<Props> = (props) => {
             </Box>
 
             {/* SKILL SET */}
-            <WaveSpacer svgName="bottom-svg2"></WaveSpacer>
+            <WaveSpacer imageHref="assets/bottom-wave2.svg"></WaveSpacer>
             <Box as="section" backgroundColor="gray.50" mt="-2px">
                 <Box
                     maxW="2xl"

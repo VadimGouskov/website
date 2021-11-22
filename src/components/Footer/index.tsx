@@ -17,9 +17,9 @@ const Footer: React.FC = () => {
     return (
         <>
             {showSecondaryWave() && (
-                <WaveSpacer svgName="bottom-svg2" bgColor="transparent"></WaveSpacer>
+                <WaveSpacer imageHref="assets/bottom-wave2.svg" bgColor="transparent"></WaveSpacer>
             )}
-            <WaveSpacer svgName="bottom-svg" bgColor="gray.50"></WaveSpacer>
+            <WaveSpacer imageHref="assets/bottom-wave.svg" bgColor="gray.50"></WaveSpacer>
             <Box
                 as="footer"
                 role="contentinfo"
