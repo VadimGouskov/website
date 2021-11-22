@@ -19,6 +19,7 @@ const Index: React.FC = () => {
                     title={t("FEATURE_WEB_DEVELOPMENT_TITLE")}
                     text={t("FEATURE_WEB_DEVELOPMENT_TEXT")}
                     buttonText={t("FEATURE_WEB_DEVELOPMENT_BUTTON")}
+                    buttonHref="skillset"
                 >
                     <Box
                         position="relative"
@@ -52,6 +53,7 @@ const Index: React.FC = () => {
                     title={t("FEATURE_CREATIVE_CODING_TITLE")}
                     text={t("FEATURE_CREATIVE_CODING_TEXT")}
                     buttonText={t("FEATURE_CREATIVE_CODING_BUTTON")}
+                    buttonHref="creative-coding"
                 >
                     <Img
                         htmlWidth="500px"
@@ -67,6 +69,7 @@ const Index: React.FC = () => {
                     title={t("FEATURE_OTLI_TITLE")}
                     text={t("FEATURE_OTLI_TEXT")}
                     buttonText={t("FEATURE_OTLI_BUTTON")}
+                    buttonHref="https://www.otli.io"
                 >
                     <Box position="relative" height="400px">
                         <Img

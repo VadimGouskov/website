@@ -3,10 +3,12 @@ import {
     Button,
     Heading,
     Img,
+    propNames,
     SimpleGrid,
     Text,
     useColorModeValue as mode,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import * as React from "react";
 import {useEffect} from "react";
 import {BsArrowRight} from "react-icons/bs";
@@ -15,10 +17,18 @@ type FeatureProps = {
     title: string;
     text: string;
     buttonText: string;
+    buttonHref?: string;
     reverse?: boolean;
 };
 
-const BlobFeature: React.FC<FeatureProps> = (props) => {
+const BlobFeature: React.FC<FeatureProps> = ({
+    title,
+    text,
+    buttonText,
+    buttonHref = "#",
+    reverse = false,
+    children,
+}) => {
     const blobSrc = "assets/blob3.svg";
 
     return (
@@ -34,7 +44,7 @@ const BlobFeature: React.FC<FeatureProps> = (props) => {
                 overflow="visible"
             >
                 <SimpleGrid columns={{base: 1, md: 2}} spacing="10">
-                    <Box order={[0, !!props.reverse ? 1 : 0]}>{props.children}</Box>
+                    <Box order={[0, !!reverse ? 1 : 0]}>{children}</Box>
                     <Box width="100%" position="relative" overflow="visible">
                         <Img
                             position="absolute"
@@ -43,7 +53,7 @@ const BlobFeature: React.FC<FeatureProps> = (props) => {
                             htmlHeight="800px"
                             height={{md: "800px"}}
                             src={blobSrc}
-                            order={[0, !!props.reverse ? 1 : 0]}
+                            order={[0, !!reverse ? 1 : 0]}
                             objectFit="contain"
                             zIndex="-1"
                             transform="scale(1.5)"
@@ -51,21 +61,23 @@ const BlobFeature: React.FC<FeatureProps> = (props) => {
 
                         <Box p="5">
                             <Heading size="2xl" mb="4" fontWeight="extrabold">
-                                {props.title}
+                                {title}
                             </Heading>
                             <Text fontSize={{base: "xl", md: "3xl"}} mb="6" maxW="md">
-                                {props.text}
+                                {text}
                             </Text>
-                            <Button
-                                size="lg"
-                                colorScheme="blue"
-                                rightIcon={<BsArrowRight />}
-                                fontWeight="bold"
-                                fontSize="2xl"
-                                w={{base: "full", sm: "auto"}}
-                            >
-                                {props.buttonText}
-                            </Button>
+                            <Link href={buttonHref} passHref>
+                                <Button
+                                    size="lg"
+                                    colorScheme="blue"
+                                    rightIcon={<BsArrowRight />}
+                                    fontWeight="bold"
+                                    fontSize="2xl"
+                                    w={{base: "full", sm: "auto"}}
+                                >
+                                    {buttonText}
+                                </Button>
+                            </Link>
                         </Box>
                     </Box>
                 </SimpleGrid>
