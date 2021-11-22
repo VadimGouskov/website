@@ -4,7 +4,7 @@ console.log(i18n);
 module.exports = {
   i18n, 
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   }
 }
 
