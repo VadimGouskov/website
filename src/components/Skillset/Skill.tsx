@@ -11,8 +11,8 @@ type SkillProps = {
 const Skill: React.FC<SkillProps> = ({title, emoji, emojiLabel, children}) => {
     return (
         <>
-            <Box mb="4">
-                <Heading size="lg" mb="0">
+            <Box mb="6">
+                <Heading size="lg" mb="2">
                     {title} <Emoji symbol={emoji} label={emojiLabel} />
                 </Heading>
                 <Text textColor="gray.800">{children}</Text>

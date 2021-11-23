@@ -82,7 +82,9 @@ const Skillset: React.FC<Props> = (props) => {
                         {t("WEBDEV_BROWSER_EXTENSIONS_TEXT")}
                     </Skill>
 
-                    <Heading size="xl"> {t("OTHER_HEADING")} </Heading>
+                    <Heading size="xl" mt="14">
+                        {t("OTHER_HEADING")}
+                    </Heading>
 
                     <Skill title={t("OTHER_LANGUAGES_TITLE")}>
                         <Text>

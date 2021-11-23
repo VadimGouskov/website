@@ -16,7 +16,10 @@ const CreativeCoding: React.FC<Props> = (props) => {
                     <Box width={["md"]}>
                         <VStack>
                             <Heading>{t("CREATIVE_CODING_HEADING")}</Heading>
-                            <Text>{t("CREATIVE_CODING_TEXT")}</Text>
+                            <Text
+                                style={{whiteSpace: "pre-line"}}
+                                dangerouslySetInnerHTML={{__html: t("CREATIVE_CODING_TEXT")}}
+                            ></Text>
                         </VStack>
                     </Box>
                 </Center>
