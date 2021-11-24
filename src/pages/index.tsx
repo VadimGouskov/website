@@ -26,15 +26,24 @@ const Index: React.FC = () => {
                         height={{base: "300px", lg: "400px"}}
                         left={{base: "25%", md: "0"}}
                     >
-                        <WebIcon imgSrc="assets/react-logo.svg" />
-                        <WebIcon imgSrc="assets/nextjs-logo.svg" offsetX="50%" />
+                        <WebIcon
+                            imgSrc="assets/react-logo.svg"
+                            animationClass="webdev-icon--top-left"
+                        />
+                        <WebIcon
+                            imgSrc="assets/nextjs-logo.svg"
+                            animationClass="webdev-icon--top-right"
+                            offsetX="50%"
+                        />
                         <WebIcon
                             imgSrc="assets/nodejs-logo.svg"
+                            animationClass="webdev-icon--center"
                             offsetX="25%"
                             offsetY={{base: "33%", md: "50%"}}
                         />
                         <WebIcon
                             imgSrc="assets/typescript-logo.svg"
+                            animationClass="webdev-icon--bottom-right"
                             offsetX="50%"
                             offsetY={{base: "66%", md: "100%"}}
                             logoWidth="85%"
@@ -42,6 +51,7 @@ const Index: React.FC = () => {
                         />
                         <WebIcon
                             imgSrc="assets/webpack-logo.svg"
+                            animationClass="webdev-icon--bottom-left"
                             offsetX="0%"
                             offsetY={{base: "66%", md: "100%"}}
                         />

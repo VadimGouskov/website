@@ -4,6 +4,12 @@ import * as CSS from "csstype";
 
 type Props = {
     imgSrc: string;
+    animationClass:
+        | "webdev-icon--center"
+        | "webdev-icon--top-left"
+        | "webdev-icon--top-right"
+        | "webdev-icon--bottom-right"
+        | "webdev-icon--bottom-left";
     offsetX?: string;
     offsetY?: string | ResponsiveValue<CSS.Property.Top<string | number>>;
     logoWidth?: string;
@@ -12,6 +18,7 @@ type Props = {
 
 const WebIcon: React.FC<Props> = ({
     imgSrc,
+    animationClass,
     offsetX = "0px",
     offsetY = "0px",
     logoWidth = "85%",
@@ -19,6 +26,7 @@ const WebIcon: React.FC<Props> = ({
 }) => {
     return (
         <Box
+            className={`webdev-animate ${animationClass}`}
             width="33%"
             rounded={rounded}
             position="absolute"
@@ -32,7 +40,7 @@ const WebIcon: React.FC<Props> = ({
             _before={{content: "''", float: "left", paddingTop: "100%"}}
         >
             <Img
-                aspectRatio={1 / 1}
+                aspectratio={1 / 1}
                 htmlWidth={logoWidth}
                 //height={{md: "100px"}}
                 objectFit="contain"

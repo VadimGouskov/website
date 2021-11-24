@@ -12,3 +12,41 @@ body {
     background-size: cover;
     z-index: 0;
 }
+
+.webdev-animate {
+    background-color: brown;
+    animation: moveIn 500ms forwards;
+    opacity: 0;
+}
+
+.webdev-icon--center {
+    --from-transform: translate(-50%, -50%);
+    animation-delay: 0;
+}
+.webdev-icon--top-left {
+    --from-transform: translate(-100%, -100%);
+    animation-delay: 200ms;
+}
+.webdev-icon--top-right {
+    --from-transform: translate(0%, -100%);
+    animation-delay: 400ms;
+}
+.webdev-icon--bottom-right {
+    --from-transform: translate(0%, 0%);
+    animation-delay: 600ms;
+}
+.webdev-icon--bottom-left {
+    --from-transform: translate(-100%, 0%);
+    animation-delay: 800ms;
+}
+
+@keyframes moveIn {
+    from {
+        opacity: 0;
+        transform: var(--from-transform);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
