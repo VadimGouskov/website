@@ -31,6 +31,7 @@ const Nav: React.FC = () => {
                     >
                         Creative Coding
                     </NavLink>
+                    <NavLink href={`${SKILLSET_PATH}#contact-section`}>Contact</NavLink>
                 </Navbar.Links>
                 <Navbar.UserProfile>
                     <UserProfile

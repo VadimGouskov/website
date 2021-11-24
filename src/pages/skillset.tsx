@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Box, Heading, Text, Button, UnorderedList, ListItem, Icon} from "@chakra-ui/react";
+import {Box, Heading, Text} from "@chakra-ui/react";
 import getUnicodeFlagIcon from "country-flag-icons/unicode";
 import Skill from "../components/Skillset/Skill";
 import {GetStaticPropsResult} from "next";
@@ -7,6 +7,7 @@ import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
 import SkillBox from "../components/Skillset/SkillBox";
 import {WaveSpacer} from "../components/Common/WaveSpacer";
+import Contact from "../components/Contact";
 
 interface Props {}
 
@@ -108,25 +109,8 @@ const SkillSetPage: React.FC<Props> = (props) => {
             </Box>
 
             {/* CALL TO ACTION */}
-            <Box as="section" backgroundColor="gray.50">
-                <Box
-                    maxW="2xl"
-                    mx="auto"
-                    px={{base: "6", lg: "8"}}
-                    py={{base: "16", sm: "20"}}
-                    textAlign="center"
-                >
-                    <Heading size="3xl" fontWeight="extrabold" letterSpacing="tight">
-                        Want to work together?
-                    </Heading>
-                    <Text mt="4" fontSize="lg">
-                        Want to talk about a job oportunity, project, collaboration or common
-                        interest? Contact me and I will get in touch with you asap.
-                    </Text>
-                    <Button mt="8" as="a" href="#" size="lg" colorScheme="blue" fontWeight="bold">
-                        Contact
-                    </Button>
-                </Box>
+            <Box as="section" backgroundColor="gray.50" id="contact-section" height="70vh">
+                <Contact></Contact>
             </Box>
         </>
     );
