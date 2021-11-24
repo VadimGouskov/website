@@ -7,6 +7,29 @@ import WebIcon from "../Feature/WebIcon";
 const WebDevelopment: React.FC = () => {
     const {t} = useTranslation("index");
 
+    // Trigger the WebIcon animations when the bottom icons are within the viewport
+    const OBSERVER_TARGET = "webdev-observer-target";
+    React.useEffect(() => {
+        const webDevIcons = document.querySelectorAll(".webdev-icon");
+
+        // check IntersectionObserver support
+        if (!("IntersectionObserver" in window)) {
+            webDevIcons.forEach((element) => element.classList.remove("webdev-icon-hidden"));
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                document.querySelectorAll(".webdev-icon").forEach((element) => {
+                    element.classList.remove("webdev-icon-hidden");
+                    element.classList.add("webdev-animate");
+                });
+            });
+        });
+        observer.observe(document.querySelector(`.${OBSERVER_TARGET}`));
+    });
+
     return (
         <BlobFeature
             title={t("FEATURE_WEB_DEVELOPMENT_TITLE")}
@@ -44,6 +67,7 @@ const WebDevelopment: React.FC = () => {
                     animationClass="webdev-icon--bottom-left"
                     offsetX="0%"
                     offsetY={{base: "66%", md: "100%"}}
+                    observerClass={OBSERVER_TARGET}
                 />
             </Box>
         </BlobFeature>

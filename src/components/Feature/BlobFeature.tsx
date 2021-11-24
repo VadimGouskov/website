@@ -19,6 +19,7 @@ type FeatureProps = {
     buttonText: string;
     buttonHref?: string;
     reverse?: boolean;
+    blobClass?: string;
 };
 
 const BlobFeature: React.FC<FeatureProps> = ({
@@ -27,6 +28,7 @@ const BlobFeature: React.FC<FeatureProps> = ({
     buttonText,
     buttonHref = "#",
     reverse = false,
+    blobClass,
     children,
 }) => {
     const blobSrc = "assets/blob3.svg";
@@ -74,6 +76,7 @@ const BlobFeature: React.FC<FeatureProps> = ({
                                     fontWeight="bold"
                                     fontSize="2xl"
                                     w={{base: "full", sm: "auto"}}
+                                    className={blobClass}
                                 >
                                     {buttonText}
                                 </Button>

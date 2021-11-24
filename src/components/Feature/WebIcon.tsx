@@ -10,6 +10,7 @@ type Props = {
         | "webdev-icon--top-right"
         | "webdev-icon--bottom-right"
         | "webdev-icon--bottom-left";
+    observerClass?: string;
     offsetX?: string;
     offsetY?: string | ResponsiveValue<CSS.Property.Top<string | number>>;
     logoWidth?: string;
@@ -19,6 +20,7 @@ type Props = {
 const WebIcon: React.FC<Props> = ({
     imgSrc,
     animationClass,
+    observerClass,
     offsetX = "0px",
     offsetY = "0px",
     logoWidth = "85%",
@@ -26,7 +28,8 @@ const WebIcon: React.FC<Props> = ({
 }) => {
     return (
         <Box
-            className={`webdev-animate ${animationClass}`}
+            // webdev icons are hidden by default and animated in or displayed afterwards. An optional ObserverClass is used as the target for the IntersectionObserver
+            className={`webdev-icon webdev-icon-hidden ${animationClass} ${observerClass}`}
             width="33%"
             rounded={rounded}
             position="absolute"

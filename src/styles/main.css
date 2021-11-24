@@ -13,8 +13,11 @@ body {
     z-index: 0;
 }
 
+.webdev-icon-hidden {
+    opacity: 0;
+}
+
 .webdev-animate {
-    background-color: brown;
     animation: moveIn 500ms forwards;
     opacity: 0;
 }
