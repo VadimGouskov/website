@@ -1,4 +1,4 @@
-import {Box, Center, useColorModeValue as mode} from "@chakra-ui/react";
+import {Box, Center, useColorModeValue as mode, useDisclosure} from "@chakra-ui/react";
 import * as React from "react";
 import {Navbar} from "./Navbar";
 import {NavLink} from "./NavLink";
@@ -16,29 +16,36 @@ const Nav: React.FC = () => {
         return router.pathname.includes(path);
     };
 
+    const disclosure = useDisclosure();
+
     return (
         <Box>
-            <Navbar>
+            <Navbar disclosure={disclosure}>
                 <Navbar.Brand></Navbar.Brand>
                 <Navbar.Links>
-                    <NavLink href="/">Home</NavLink>
-                    <NavLink isActive={getIsActive(SKILLSET_PATH)} href={SKILLSET_PATH}>
+                    <NavLink href="/" onClick={disclosure.onClose}>
+                        Home
+                    </NavLink>
+                    <NavLink
+                        isActive={getIsActive(SKILLSET_PATH)}
+                        href={SKILLSET_PATH}
+                        onClick={disclosure.onClose}
+                    >
                         Skillset / CV
                     </NavLink>
                     <NavLink
                         isActive={getIsActive(CREATIVE_CODING_PATH)}
                         href={CREATIVE_CODING_PATH}
+                        onClick={disclosure.onClose}
                     >
                         Creative Coding
                     </NavLink>
-                    <NavLink href={`${SKILLSET_PATH}#contact-section`}>Contact</NavLink>
+                    <NavLink href={`${SKILLSET_PATH}#contact-section`} onClick={disclosure.onClose}>
+                        Contact
+                    </NavLink>
                 </Navbar.Links>
                 <Navbar.UserProfile>
-                    <UserProfile
-                        name="Christian Schröter"
-                        avatarUrl="https://ca.slack-edge.com/T024F7F15-UJVQ359SP-81fc55875723-512"
-                        email="mail@chidori-ui.com"
-                    />
+                    <UserProfile />
                 </Navbar.UserProfile>
             </Navbar>
             <WaveSpacer imageHref="assets/hero-wave.svg" offsetY={-40} />

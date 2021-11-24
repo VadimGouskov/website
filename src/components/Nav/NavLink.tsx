@@ -1,12 +1,12 @@
-import {Link as ChakraLink, LinkProps, useColorModeValue as mode} from "@chakra-ui/react";
+import {Link as ChakraLink, LinkProps} from "@chakra-ui/react";
 import Link from "next/link";
 import * as React from "react";
 
-type NavLinkProps = LinkProps & {href: string; isActive?: boolean};
+type NavLinkProps = LinkProps & {href: string; isActive?: boolean; onClick?: () => void};
 
-export const NavLink: React.FC<NavLinkProps> = ({href, isActive, ...rest}) => {
+export const NavLink: React.FC<NavLinkProps> = ({href, isActive, onClick, ...rest}) => {
     return (
-        <Link href={href}>
+        <Link href={href} passHref>
             <ChakraLink
                 display="block"
                 py={2}
@@ -22,6 +22,7 @@ export const NavLink: React.FC<NavLinkProps> = ({href, isActive, ...rest}) => {
                     bg: "white",
                     color: "black",
                 }}
+                onClick={onClick}
                 {...rest}
             />
         </Link>

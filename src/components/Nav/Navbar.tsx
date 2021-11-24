@@ -8,13 +8,17 @@ import {
     Stack,
     useColorModeValue,
     useDisclosure,
+    UseDisclosureProps,
 } from "@chakra-ui/react";
 import {HamburgerIcon} from "@chakra-ui/icons";
 import {MobileNavContent} from "./MobileNavContent";
 
-export const Template: React.FC = (props) => {
+type Props = {
+    disclosure: UseDisclosureProps;
+};
+
+export const Template: React.FC<Props> = (props) => {
     const children = React.Children.toArray(props.children).filter<ReactElement>(isValidElement);
-    const mobileNav = useDisclosure();
     return (
         <Flex
             p={4}
@@ -44,11 +48,11 @@ export const Template: React.FC = (props) => {
                 fontSize="20px"
                 color="white"
                 bg="transparent"
-                onClick={mobileNav.onOpen}
+                onClick={props.disclosure.onOpen}
                 icon={<HamburgerIcon />}
             />
 
-            <MobileNavContent isOpen={mobileNav.isOpen} onClose={mobileNav.onClose}>
+            <MobileNavContent isOpen={props.disclosure.isOpen} onClose={props.disclosure.onClose}>
                 <Stack spacing={5}>
                     <Flex>{children.find((child) => child.type === Brand)?.props.children}</Flex>
                     <Stack>{children.find((child) => child.type === Links)?.props.children}</Stack>

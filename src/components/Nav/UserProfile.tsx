@@ -2,13 +2,7 @@ import {Flex, Icon, HStack, Avatar} from "@chakra-ui/react";
 import * as React from "react";
 import Flags from "country-flag-icons/react/3x2";
 
-interface Props {
-    name: string;
-    email: string;
-    avatarUrl: string;
-}
-
-export const UserProfile: React.FC<Props> = (props) => {
+export const UserProfile: React.FC = () => {
     const FLAG_SIZE = 8;
     return (
         <>
