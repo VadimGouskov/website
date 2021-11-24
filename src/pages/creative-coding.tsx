@@ -5,9 +5,7 @@ import {useTranslation} from "next-i18next";
 import {GetStaticPropsResult} from "next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
-interface Props {}
-
-const CreativeCoding: React.FC<Props> = (props) => {
+const CreativeCodingPage: React.FC = (props) => {
     const {t} = useTranslation("creative-coding");
     return (
         <>
@@ -29,7 +27,7 @@ const CreativeCoding: React.FC<Props> = (props) => {
     );
 };
 
-export default CreativeCoding;
+export default CreativeCodingPage;
 
 export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
     return {

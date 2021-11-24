@@ -10,7 +10,7 @@ import {WaveSpacer} from "../components/Common/WaveSpacer";
 
 interface Props {}
 
-const Skillset: React.FC<Props> = (props) => {
+const SkillSetPage: React.FC<Props> = (props) => {
     const {t} = useTranslation("skillset");
 
     return (
@@ -132,7 +132,7 @@ const Skillset: React.FC<Props> = (props) => {
     );
 };
 
-export default Skillset;
+export default SkillSetPage;
 
 export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
     return {

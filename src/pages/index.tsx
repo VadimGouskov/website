@@ -7,121 +7,26 @@ import {useTranslation} from "next-i18next";
 import BlobFeature from "../components/Feature/BlobFeature";
 import {Box, Img} from "@chakra-ui/react";
 import WebIcon from "../components/Feature/WebIcon";
+import WebDevelopment from "../components/Home/WebDevelopment";
+import CreativeCoding from "../components/Home/CreativeCoding";
+import Otli from "../components/Home/Otli";
 
-const Index: React.FC = () => {
+const IndexPage: React.FC = () => {
     const {t} = useTranslation("index");
 
     return (
         <>
             <Hero></Hero>
             <Box overflowX={{base: "hidden", lg: "visible"}}>
-                <BlobFeature
-                    title={t("FEATURE_WEB_DEVELOPMENT_TITLE")}
-                    text={t("FEATURE_WEB_DEVELOPMENT_TEXT")}
-                    buttonText={t("FEATURE_WEB_DEVELOPMENT_BUTTON")}
-                    buttonHref="skillset"
-                >
-                    <Box
-                        position="relative"
-                        height={{base: "300px", lg: "400px"}}
-                        left={{base: "25%", md: "0"}}
-                    >
-                        <WebIcon
-                            imgSrc="assets/react-logo.svg"
-                            animationClass="webdev-icon--top-left"
-                        />
-                        <WebIcon
-                            imgSrc="assets/nextjs-logo.svg"
-                            animationClass="webdev-icon--top-right"
-                            offsetX="50%"
-                        />
-                        <WebIcon
-                            imgSrc="assets/nodejs-logo.svg"
-                            animationClass="webdev-icon--center"
-                            offsetX="25%"
-                            offsetY={{base: "33%", md: "50%"}}
-                        />
-                        <WebIcon
-                            imgSrc="assets/typescript-logo.svg"
-                            animationClass="webdev-icon--bottom-right"
-                            offsetX="50%"
-                            offsetY={{base: "66%", md: "100%"}}
-                            logoWidth="85%"
-                            rounded="10%"
-                        />
-                        <WebIcon
-                            imgSrc="assets/webpack-logo.svg"
-                            animationClass="webdev-icon--bottom-left"
-                            offsetX="0%"
-                            offsetY={{base: "66%", md: "100%"}}
-                        />
-                    </Box>
-                </BlobFeature>
-
-                <BlobFeature
-                    reverse
-                    title={t("FEATURE_CREATIVE_CODING_TITLE")}
-                    text={t("FEATURE_CREATIVE_CODING_TEXT")}
-                    buttonText={t("FEATURE_CREATIVE_CODING_BUTTON")}
-                    buttonHref="creative-coding"
-                >
-                    <Img
-                        htmlWidth="500px"
-                        htmlHeight="320px"
-                        height={{md: "320px"}}
-                        objectFit="cover"
-                        src="assets/wave.png"
-                        alt="TODO"
-                    />
-                </BlobFeature>
-
-                <BlobFeature
-                    title={t("FEATURE_OTLI_TITLE")}
-                    text={t("FEATURE_OTLI_TEXT")}
-                    buttonText={t("FEATURE_OTLI_BUTTON")}
-                    buttonHref="https://www.otli.io"
-                >
-                    <Box position="relative" height="400px">
-                        <Img
-                            position="absolute"
-                            src="assets/otli-blip.svg"
-                            width="66%"
-                            top="16%"
-                            left="75%"
-                            transform="translate(-50%, -50%)"
-                        ></Img>
-                        <Img
-                            position="absolute"
-                            src="assets/otli-blip2.svg"
-                            width="50%"
-                            left={{base: "0", md: "-20%"}}
-                            top="66%"
-                            transform="translate(-50%, -50%)"
-                        ></Img>
-                        <Box
-                            pos="absolute"
-                            backgroundColor="rgb(14, 17, 61)"
-                            width="66%"
-                            height="66%"
-                        >
-                            <Img
-                                width="66%"
-                                src="assets/otli-logo-white.svg"
-                                objectFit="contain"
-                                position="absolute"
-                                left="50%"
-                                top="50%"
-                                transform="translate(-50%, -50%)"
-                            ></Img>
-                        </Box>
-                    </Box>
-                </BlobFeature>
+                <WebDevelopment></WebDevelopment>
+                <CreativeCoding></CreativeCoding>
+                <Otli></Otli>
             </Box>
         </>
     );
 };
 
-export default Index;
+export default IndexPage;
 
 export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
     return {

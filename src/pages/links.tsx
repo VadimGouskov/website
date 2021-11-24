@@ -8,7 +8,7 @@ import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 interface Props {}
 
-const Bio: React.FC<Props> = (props) => {
+const LinksPage: React.FC<Props> = (props) => {
     return (
         <>
             <Box h="80vh">
@@ -24,7 +24,7 @@ const Bio: React.FC<Props> = (props) => {
     );
 };
 
-export default Bio;
+export default LinksPage;
 
 export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
     return {
