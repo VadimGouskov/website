@@ -4,14 +4,11 @@ import Head from "next/head";
 import {ChakraProvider} from "@chakra-ui/react";
 import theme from "../styles/theme";
 import React from "react";
-import {appWithTranslation, useTranslation} from "next-i18next";
+import {appWithTranslation} from "next-i18next";
 import "../styles/main.css";
-import {GetStaticPropsResult} from "next";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useRouter} from "next/router";
 
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
-    const {t} = useTranslation("head");
     const router = useRouter();
     return (
         <>
@@ -47,11 +44,3 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
 };
 
 export default appWithTranslation(App);
-
-export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ["head"])),
-        },
-    };
-}
