@@ -15,7 +15,7 @@ const Skill: React.FC<SkillProps> = ({title, emoji, emojiLabel, children}) => {
                 <Heading size="lg" mb="2">
                     {title} <Emoji symbol={emoji} label={emojiLabel} />
                 </Heading>
-                <Text textColor="gray.800">{children}</Text>
+                {children}
             </Box>
         </>
     );
