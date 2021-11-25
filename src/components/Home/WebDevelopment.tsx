@@ -49,12 +49,6 @@ const WebDevelopment: React.FC = () => {
                     offsetX="50%"
                 />
                 <WebIcon
-                    imgSrc="assets/nodejs-logo.svg"
-                    animationClass="webdev-icon--center"
-                    offsetX="25%"
-                    offsetY={{base: "33%", md: "50%"}}
-                />
-                <WebIcon
                     imgSrc="assets/typescript-logo.svg"
                     animationClass="webdev-icon--bottom-right"
                     offsetX="50%"
@@ -68,6 +62,12 @@ const WebDevelopment: React.FC = () => {
                     offsetX="0%"
                     offsetY={{base: "66%", md: "100%"}}
                     observerClass={OBSERVER_TARGET}
+                />
+                <WebIcon
+                    imgSrc="assets/nodejs-logo.svg"
+                    animationClass="webdev-icon--center"
+                    offsetX="25%"
+                    offsetY={{base: "33%", md: "50%"}}
                 />
             </Box>
         </BlobFeature>

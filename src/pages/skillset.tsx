@@ -8,6 +8,7 @@ import {useTranslation} from "next-i18next";
 import SkillBox from "../components/Skillset/SkillBox";
 import {WaveSpacer} from "../components/Common/WaveSpacer";
 import Contact from "../components/Contact";
+import Head from "next/head";
 
 interface Props {}
 
@@ -16,6 +17,14 @@ const SkillSetPage: React.FC<Props> = (props) => {
 
     return (
         <>
+            <Head>
+                <title>Vadim Gouskov | Web Development</title>
+                <meta
+                    property="description"
+                    content="Full stack Web Developer with a passion for modern frameworks and a clean development process. In love with Nextjs, React, nodejs, Typescript, Chakra UI and many more."
+                    key="app-description"
+                ></meta>
+            </Head>
             {/* TIMELINE */}
             <Box as="section">
                 <Box
