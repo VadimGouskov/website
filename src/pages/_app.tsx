@@ -8,9 +8,11 @@ import {appWithTranslation, useTranslation} from "next-i18next";
 import "../styles/main.css";
 import {GetStaticPropsResult} from "next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useRouter} from "next/router";
 
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
     const {t} = useTranslation("head");
+    const router = useRouter();
     return (
         <>
             <Head>
@@ -29,7 +31,10 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                     property="og:description"
                     content="I am Vadim: I love web development and creative coding. Combining those two passions I like to build things that are useful and/or beautiful. I also created a browser extension called Otli.io to help people avoid distracting content on the web."
                 ></meta>
-                <meta property="og:image" content="assets/vadim-gouskov-og-image.jpg"></meta>
+                <meta
+                    property="og:image"
+                    content="https://vadim.li/assets/vadim-gouskov-og-image.jpg"
+                ></meta>
             </Head>
 
             <ChakraProvider theme={theme}>
