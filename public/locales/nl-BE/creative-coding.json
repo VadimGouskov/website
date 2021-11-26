@@ -1,0 +1,10 @@
+{
+    "CREATIVE_CODING_HEADING": "Creative Coding" ,
+    "CREATIVE_CODING_TEXT": "To me, creative coding is using the flexibility of writing custom software to create visual, auditory or other experiences.\n \nI will update this section of my website with live sketches and other creative ideas. For now, you can find a selection of my endeavors into generative design and creative coding below. ", 
+    "POST_INSTAGRAM_TITLE": "Generative Art collection" ,
+    "POST_INSTAGRAM_TEXT": "My Instagram account where I post my finished artwork and creative process videos. Follow me there to stay updated." ,
+    "POST_P5_TYPESCRIPT_STARTER_TITLE": "P5.js Starter Project",
+    "POST_P5_TYPESCRIPT_STARTER_TEXT": "A template project to quickly run P5.js sketches with Typescript, WebPack, Live Reloading, esLint and Prettier",
+    "POST_P5_SOURCE_CODE_TITLE": "Generative Artwork Source Code",
+    "POST_P5_SOURCE_CODE_TEXT": "A collection of the code behind the designs. Feel free to use any code in this repository or contact me for questions or suggestions."
+}

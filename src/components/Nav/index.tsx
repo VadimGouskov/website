@@ -2,7 +2,7 @@ import {Box, Center, useColorModeValue as mode, useDisclosure} from "@chakra-ui/
 import * as React from "react";
 import {Navbar} from "./Navbar";
 import {NavLink} from "./NavLink";
-import {UserProfile} from "./UserProfile";
+import LanguageSelection from "./LanguageSelection";
 import {useRouter} from "next/router";
 import {WaveSpacer} from "../Common/WaveSpacer";
 
@@ -45,7 +45,7 @@ const Nav: React.FC = () => {
                     </NavLink>
                 </Navbar.Links>
                 <Navbar.UserProfile>
-                    <UserProfile />
+                    <LanguageSelection />
                 </Navbar.UserProfile>
             </Navbar>
             <WaveSpacer imageHref="assets/hero-wave.svg" offsetY={-40} />
