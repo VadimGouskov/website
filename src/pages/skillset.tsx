@@ -65,15 +65,15 @@ const SkillSetPage: React.FC<Props> = (props) => {
                     <Heading size="xl">{t("WEBDEV_HEADING")}</Heading>
 
                     <Skill title={t("WEBDEV_BUILDING_WEBAPPS_TITLE")} emoji="⚙️" emojiLabel="gear">
-                        {t("WEBDEV_BUILDING_WEBAPPS_TEXT")}
+                        <Text>{t("WEBDEV_BUILDING_WEBAPPS_TEXT")}</Text>
                     </Skill>
 
                     <Skill title={t("WEBDEV_STYLING_TITLE")} emoji="🖌️" emojiLabel="brush">
-                        {t("WEBDEV_STYLING_TEXT")}
+                        <Text>{t("WEBDEV_STYLING_TEXT")}</Text>
                     </Skill>
 
                     <Skill title={t("WEBDEV_DEPLOYING_TITLE")} emoji="🚀" emojiLabel="rocket">
-                        {t("WEBDEV_DEPLOYING_TEXT")}
+                        <Text>{t("WEBDEV_DEPLOYING_TEXT")}</Text>
                     </Skill>
 
                     <Skill
@@ -81,7 +81,7 @@ const SkillSetPage: React.FC<Props> = (props) => {
                         emoji="👨‍💻"
                         emojiLabel="man-behind-computer"
                     >
-                        {t("WEBDEV_STREAMLINING_DEVELOPMENT_TEXT")}
+                        <Text>{t("WEBDEV_STREAMLINING_DEVELOPMENT_TEXT")}</Text>
                     </Skill>
 
                     <Skill
@@ -89,7 +89,7 @@ const SkillSetPage: React.FC<Props> = (props) => {
                         emoji="✨"
                         emojiLabel="sparkles"
                     >
-                        {t("WEBDEV_BROWSER_EXTENSIONS_TEXT")}
+                        <Text>{t("WEBDEV_BROWSER_EXTENSIONS_TEXT")}</Text>
                     </Skill>
 
                     <Heading size="xl" mt="14">
@@ -112,7 +112,7 @@ const SkillSetPage: React.FC<Props> = (props) => {
                     </Skill>
 
                     <Skill title={t("OTHER_TECHNICAL_COMMUNICATION_TITLE")}>
-                        {t("OTHER_TECHNICAL_COMMUNICATION_TEXT")}
+                        <Text>{t("OTHER_TECHNICAL_COMMUNICATION_TEXT")}</Text>
                     </Skill>
                 </Box>
             </Box>
