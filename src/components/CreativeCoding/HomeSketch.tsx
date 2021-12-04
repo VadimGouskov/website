@@ -1,15 +1,10 @@
 import p5Type from "p5";
 import * as React from "react";
 
-class HomeSketch extends React.Component {
-    myRef: React.RefObject<HTMLDivElement>;
-    myP5: p5Type;
-    constructor(props) {
-        super(props);
-        this.myRef = React.createRef();
-    }
+const HomeSketch: React.FC = () => {
+    const myRef = React.createRef<HTMLDivElement>();
 
-    componentDidMount() {
+    React.useEffect(() => {
         const p5 = require("p5");
         const Sketch = (p: p5Type) => {
             const CANVAS_WIDTH = 500;
@@ -28,12 +23,10 @@ class HomeSketch extends React.Component {
             };
         };
 
-        this.myP5 = new p5(Sketch, this.myRef.current);
-    }
+        const myP5 = new p5(Sketch, myRef.current);
+    });
 
-    render() {
-        return <div ref={this.myRef}></div>;
-    }
-}
+    return <div ref={myRef}></div>;
+};
 
 export default HomeSketch;
