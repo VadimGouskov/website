@@ -1,32 +1,39 @@
-import p5 from "p5";
+import p5Type from "p5";
 import * as React from "react";
 
-const HomeSketch: React.FC = () => {
-    const sketchRef = React.useRef();
-    const myP5 = React.useRef<p5>();
+class HomeSketch extends React.Component {
+    myRef: React.RefObject<HTMLDivElement>;
+    myP5: p5Type;
+    constructor(props) {
+        super(props);
+        this.myRef = React.createRef();
+    }
 
-    React.useEffect(() => {
-        if (typeof window === undefined) return;
-        //myP5.current = new p5(sketch, sketchRef.current);
-    });
+    componentDidMount() {
+        const p5 = require("p5");
+        const Sketch = (p: p5Type) => {
+            const CANVAS_WIDTH = 500;
+            const CANVAS_HEIGHT = 500;
 
-    const sketch = (p: p5) => {
-        const CANVAS_WIDTH = 500;
-        const CANVAS_HEIGHT = 500;
+            p.setup = () => {
+                p.createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+            };
 
-        p.setup = () => {
-            p.createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+            p.draw = () => {
+                p.clear();
+                p.fill(0);
+                p.ellipseMode(p.CENTER);
+                const size = (p.mouseX / CANVAS_WIDTH) * 50;
+                p.ellipse(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, size, size);
+            };
         };
 
-        p.draw = () => {
-            p.background(255);
-            p.fill(0);
-            p.ellipseMode(p.CENTER);
-            p.ellipse(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 50, 50);
-        };
-    };
+        this.myP5 = new p5(Sketch, this.myRef.current);
+    }
 
-    return <div ref={sketchRef.current}></div>;
-};
+    render() {
+        return <div ref={this.myRef}></div>;
+    }
+}
 
 export default HomeSketch;

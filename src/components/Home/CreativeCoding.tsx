@@ -27,7 +27,7 @@ const CreativeCoding: React.FC = () => {
             />
             */}
 
-            <HomeSketch />
+            {typeof window !== undefined && <HomeSketch />}
         </BlobFeature>
     );
 };
