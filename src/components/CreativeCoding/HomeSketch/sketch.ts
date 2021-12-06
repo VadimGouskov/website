@@ -24,7 +24,7 @@ const createSketch = (p: p5, width: number, height: number) => (p: p5) => {
 
     p.draw = () => {
         p.clear();
-        centerScale(0.9)
+        centerScale(0.9);
         p.ellipseMode(p.CENTER);
         p.rectMode(p.CENTER);
         p.noStroke();

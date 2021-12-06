@@ -9,6 +9,13 @@ const HomeSketch: React.FC = () => {
         const p5 = require("p5");
         // width of the responsive div
         const canvasWidth = myRef.current.offsetWidth;
+
+        // Removes any previous canvasses
+        const canvases = myRef.current.getElementsByTagName("canvas");
+        Array.from(canvases).forEach((canvas) => {
+            canvas.remove();
+        });
+
         const Sketch = createSketch(p5, canvasWidth, canvasWidth);
         const myP5 = new p5(Sketch, myRef.current);
     });
