@@ -2,7 +2,6 @@ import p5 from 'p5';
 import { Grid } from './grid';
 
 const createSketch = (p: p5, width: number, height: number) => (p: p5) => {
-    const SKETCH_ID = "sketch";
     const CANVAS_WIDTH = width ?? 500;
     const CANVAS_HEIGHT = height ?? 500;
     const POINT_SIZE = 10;
@@ -18,21 +17,16 @@ const createSketch = (p: p5, width: number, height: number) => (p: p5) => {
     p.setup = () => {
         p.createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
         addEventListeners(p);
-        //p.frameRate(30)
         p.noLoop();
     };
 
     p.draw = () => {
         p.clear();
         centerScale(0.9)
-
         p.ellipseMode(p.CENTER);
         p.rectMode(p.CENTER);
         p.noStroke();
         p.fill("#f77f00");
-
-        // p.background(127);
-
         
         const WAVE_OFFSET_X = p.mouseX;
         const WAVE_OFFSET_Y = p.mouseY;
@@ -54,8 +48,6 @@ const createSketch = (p: p5, width: number, height: number) => (p: p5) => {
 
         t += DT;
         
-        //p.save("bl.png")
-
     };
 
     const centerScale = (amount: number) => {
