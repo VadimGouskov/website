@@ -9,8 +9,10 @@ const createSketch = (p: p5, width: number, height: number) => (p: p5) => {
 
     const POINTS_AMOUNT = CANVAS_WIDTH / ( POINT_SIZE * POINT_DISTANCE / 2);
 
+    const MOUSE_DT = 0.2;
+    const TOUCH_DT = 0.1; 
     let t = 0;
-    const DT = 0.2;
+    let DT = MOUSE_DT;
 
     const grid = new Grid(POINTS_AMOUNT, POINTS_AMOUNT, CANVAS_HEIGHT, CANVAS_WIDTH)
 
@@ -61,13 +63,26 @@ const createSketch = (p: p5, width: number, height: number) => (p: p5) => {
             p.redraw();
         });
 
+        // TODO change to canvas parent element
         document.addEventListener('mousemove', (event: Event) => {
             // redraw when mouse is moving within the canvas
             if(p.mouseX > 0 && p.mouseX < CANVAS_WIDTH && 
                 p.mouseY > 0 && p.mouseY < CANVAS_HEIGHT) {
+                    DT = MOUSE_DT;
                 p.redraw();
             }
         });
+
+            // TODO change to canvas parent element
+        document.addEventListener('touchmove', (event: Event) => {
+            // redraw when mouse is moving within the canvas
+            if(p.mouseX > 0 && p.mouseX < CANVAS_WIDTH && 
+                p.mouseY > 0 && p.mouseY < CANVAS_HEIGHT) {
+                DT = TOUCH_DT;
+                p.redraw();
+            }
+        });
+
     }
     
 };
