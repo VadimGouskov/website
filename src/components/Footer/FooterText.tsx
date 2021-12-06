@@ -17,6 +17,10 @@ const FooterText: React.FC<HTMLChakraProps<"svg">> = (props) => {
                 Next.js
             </ChakraLink>
             ,&nbsp;
+            <ChakraLink href="https://reactjs.org/" isExternal>
+                React
+            </ChakraLink>
+            ,&nbsp;
             <ChakraLink href="https://chakra-ui.com/" isExternal>
                 Chakra UI
             </ChakraLink>
@@ -27,6 +31,10 @@ const FooterText: React.FC<HTMLChakraProps<"svg">> = (props) => {
             ,&nbsp;
             <ChakraLink href="https://haikei.app/" isExternal>
                 Haikei
+            </ChakraLink>
+            ,&nbsp;
+            <ChakraLink href="https://p5js.org/" isExternal>
+                p5.js
             </ChakraLink>
             &nbsp; and many more. Thanks to everyone involved!
         </Box>
