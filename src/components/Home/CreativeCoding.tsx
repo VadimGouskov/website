@@ -1,7 +1,7 @@
 import {Img} from "@chakra-ui/react";
 import {useTranslation} from "next-i18next";
 import * as React from "react";
-import HomeSketch from "../CreativeCoding/HomeSketch";
+import HomeSketch from "../CreativeCoding/HomeSketch/";
 import BlobFeature from "../Feature/BlobFeature";
 
 const CreativeCoding: React.FC = () => {
