@@ -22,7 +22,7 @@ const FooterText: React.FC<HTMLChakraProps<"svg">> = (props) => {
             </ChakraLink>
             ,&nbsp;
             <ChakraLink href="https://chakra-ui.com/" isExternal>
-                Chakra UI
+                Chakra&nbsp;UI
             </ChakraLink>
             ,&nbsp;
             <ChakraLink href="https://www.i18next.com/" isExternal>
