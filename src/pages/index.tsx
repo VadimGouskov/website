@@ -17,6 +17,7 @@ const IndexPage: React.FC = () => {
     return (
         <>
             <Hero></Hero>
+            {/* 👋🇧 */}
             <Box overflowX={{base: "hidden", lg: "visible"}}>
                 <WebDevelopment></WebDevelopment>
                 <CreativeCoding></CreativeCoding>
