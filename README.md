@@ -1,2 +1,2 @@
-## Otli website
-otli.io
+## Personal Website
+vadimgouskov.com
