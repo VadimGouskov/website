@@ -10,6 +10,13 @@ const PostCollection: React.FC = () => {
             <Box maxW={{base: "xl", md: "7xl"}} mx="auto" px={{base: "6", md: "8"}}>
                 <SimpleGrid columns={{base: 1, md: 3}} spacing="12" mb="10">
                     <PostCard
+                        title={t("POST_PRETTY_GRID_TITLE")}
+                        category="Instagram"
+                        media="assets/pretty-grid-post-title-image.jpg"
+                        description={t("POST_PRETTY_GRID_TEXT")}
+                        href="https://www.npmjs.com/package/pretty-grid"
+                    />
+                    <PostCard
                         title={t("POST_INSTAGRAM_TITLE")}
                         category="Instagram"
                         media="assets/vadim-gouskov-instagram-collection.png"

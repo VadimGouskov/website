@@ -6,5 +6,7 @@
     "POST_P5_TYPESCRIPT_STARTER_TITLE": "P5.js Starter Project",
     "POST_P5_TYPESCRIPT_STARTER_TEXT": "A template project to quickly run P5.js sketches with Typescript, WebPack, Live Reloading, esLint and Prettier",
     "POST_P5_SOURCE_CODE_TITLE": "Generative Artwork Source Code",
-    "POST_P5_SOURCE_CODE_TEXT": "A collection of the code behind the designs. Feel free to use any code in this repository or contact me for questions or suggestions."
+    "POST_P5_SOURCE_CODE_TEXT": "A collection of the code behind the designs. Feel free to use any code in this repository or contact me for questions or suggestions.",
+    "POST_PRETTY_GRID_TITLE": "pretty-grid: A Grid Helper Library",
+    "POST_PRETTY_GRID_TEXT": "A JavaScript library that makes creating and manipulating a grid layout on an x-y plane more straight-forward, readable and versatile."
 }
