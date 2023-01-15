@@ -1,14 +1,14 @@
 {
     "HERO_TITLE_WEB_DEVELOPER": "Web Developer",
-    "HERO_TITLE_CREATIVE_CODING": "Creative Coder" ,
-    "HERO_TITLE_CREATOR_OTLI": "Maker van Otli.io",
+    "HERO_TITLE_CREATIVE_CODING": "Creative Coder",
+    "HERO_TITLE_CREATOR_OF": "Maker van",
     "FEATURE_WEB_DEVELOPMENT_TITLE": "Web Development",
     "FEATURE_WEB_DEVELOPMENT_TEXT": "Full stack Web Developer met een passie voor moderne frameworks en een proper development process. ",
     "FEATURE_WEB_DEVELOPMENT_BUTTON": "Vaardigheden / CV",
-    "FEATURE_CREATIVE_CODING_TITLE": "Creative Coding" ,
-    "FEATURE_CREATIVE_CODING_TEXT": "De perfecte combinatie van twee passies: Kunst en technologie. Ik maak digitale ontwerpen met code en tools die daarbij helpen." ,
-    "FEATURE_CREATIVE_CODING_BUTTON": "Meer" ,
+    "FEATURE_CREATIVE_CODING_TITLE": "Creative Coding",
+    "FEATURE_CREATIVE_CODING_TEXT": "De perfecte combinatie van twee passies: Kunst en technologie. Ik maak digitale ontwerpen met code en tools die daarbij helpen.",
+    "FEATURE_CREATIVE_CODING_BUTTON": "Meer",
     "FEATURE_OTLI_TITLE": "Otli.io",
-    "FEATURE_OTLI_TEXT": "We spenderen zeer veel tijd afgeleid op het web. Daarom, maakte ik Otli, een browser extensie die de meest afleidende elementen van nuttige platformen verbergt" ,
+    "FEATURE_OTLI_TEXT": "We spenderen zeer veel tijd afgeleid op het web. Daarom, maakte ik Otli, een browser extensie die de meest afleidende elementen van nuttige platformen verbergt",
     "FEATURE_OTLI_BUTTON": "naar de Website"
 }
