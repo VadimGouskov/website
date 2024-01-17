@@ -36,8 +36,8 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
             <ChakraProvider theme={theme}>
                 <Layout>
                     <Component {...pageProps} />
+                    <Analytics />
                 </Layout>
-                <Analytics />
             </ChakraProvider>
         </>
     );
