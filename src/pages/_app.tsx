@@ -6,10 +6,9 @@ import theme from "../styles/theme";
 import React from "react";
 import {appWithTranslation} from "next-i18next";
 import "../styles/main.css";
-import {useRouter} from "next/router";
+import {Analytics} from "@vercel/analytics/react";
 
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
-    const router = useRouter();
     return (
         <>
             <Head>
@@ -38,6 +37,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
+                <Analytics />
             </ChakraProvider>
         </>
     );

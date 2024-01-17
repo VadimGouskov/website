@@ -1,4 +1,4 @@
-import {Text, TextProps} from "@chakra-ui/layout";
+import { Text, TextProps } from "@chakra-ui/layout";
 import * as React from "react";
 
 export const Copyright: React.FC<TextProps> = (props) => (
@@ -6,3 +6,4 @@ export const Copyright: React.FC<TextProps> = (props) => (
         &copy; {new Date().getFullYear()} Vadim Gouskov. All rights reserved.
     </Text>
 );
+
