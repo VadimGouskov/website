@@ -1,5 +1,5 @@
 // 1. Import `extendTheme`
-import {baseStyle, extendTheme} from "@chakra-ui/react";
+import {extendTheme} from "@chakra-ui/react";
 
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({
@@ -10,22 +10,24 @@ const theme = extendTheme({
         title: "40px",
     },
     space: {
-        spacer: "1.0rem",
-        "spacer-x2": "2.0rem",
-        padding: "1.0rem",
+        sm: "0.5rem",
+        md: "1.0rem", // "16px"
+        lg: "1.5rem",
+        xl: "2.0rem",
+        x2: "4rem",
     },
     components: {
         Text: {baseStyle: {fontSize: "20px"}},
-        Heading: {baseStyle: {marginBottom: "spacer"}},
+        Heading: {baseStyle: {marginBottom: "md"}},
         Link: {baseStyle: {textDecoration: "none", fontWeight: "bold"}},
         Button: {
-            variants:{
-                "social": {
-                    bg:"transparent",
-                    color:"white",   
-                }
-            }
-        }
+            variants: {
+                social: {
+                    bg: "transparent",
+                    color: "white",
+                },
+            },
+        },
     },
 });
 
