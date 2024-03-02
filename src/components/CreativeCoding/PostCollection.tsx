@@ -1,15 +1,15 @@
-import { Box, Link, SimpleGrid } from "@chakra-ui/react";
-import { useTranslation } from "next-i18next";
+import {Box, Link, SimpleGrid} from "@chakra-ui/react";
+import {useTranslation} from "next-i18next";
 import * as React from "react";
 import PostCard from "./PostCard";
 
 const PostCollection: React.FC = () => {
-    const { t } = useTranslation("creative-coding");
+    // const {t} = useTranslation("creative-coding");
     return (
-        <Box as="section" py={{ base: "10", sm: "24" }}>
-            <Box maxW={{ base: "xl", md: "7xl" }} mx="auto" px={{ base: "6", md: "8" }}>
-                <SimpleGrid columns={{ base: 1, md: 3 }} spacing="12" mb="10">
-                    <PostCard
+        <Box as="section" py={{base: "10", sm: "24"}}>
+            <Box maxW={{base: "xl", md: "7xl"}} mx="auto" px={{base: "6", md: "8"}}>
+                <SimpleGrid columns={{base: 1, md: 3}} spacing="12" mb="10">
+                    {/* <PostCard
                         title={t("POST_PRETTY_GRID_TITLE")}
                         category="Instagram"
                         media="assets/pretty-grid-post-title-image.jpg"
@@ -36,7 +36,7 @@ const PostCollection: React.FC = () => {
                         media="assets/generative-art-source-code.jpg"
                         description={t("POST_P5_SOURCE_CODE_TEXT")}
                         href="https://github.com/VadimGouskov/p5-projects"
-                    />
+                    /> */}
                 </SimpleGrid>
             </Box>
         </Box>

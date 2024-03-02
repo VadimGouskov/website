@@ -6,7 +6,6 @@ import theme from "../styles/theme";
 import React from "react";
 import {appWithTranslation} from "next-i18next";
 import "../styles/main.css";
-import {Analytics} from "@vercel/analytics/react";
 
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
     return (
@@ -36,7 +35,6 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
             <ChakraProvider theme={theme}>
                 <Layout>
                     <Component {...pageProps} />
-                    <Analytics />
                 </Layout>
             </ChakraProvider>
         </>
