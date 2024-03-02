@@ -6,6 +6,7 @@ interface Props {
     category: string;
     title: string;
     href: string;
+    externalLink?: boolean;
     media: string;
     description: string;
 }
@@ -13,8 +14,9 @@ interface Props {
 const PostCard: React.FC<Props> = (props) => {
     const {title, href, description, media, category} = props;
     // TODO correctly wrap component with next/link
+
     return (
-        <Link href={href} passHref>
+        <Link href={href} passHref target="_blank">
             <Box
                 as="article"
                 bg={{sm: mode("white", "gray.700")}}

@@ -1,12 +1,21 @@
 import PostCollection from "../components/CreativeCoding/PostCollection";
 import {Box, Center, Heading, Text, VStack} from "@chakra-ui/react";
 import * as React from "react";
-import {useTranslation} from "next-i18next";
+import {SSRConfig, useTranslation} from "next-i18next";
 import {GetStaticPropsResult} from "next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 
-const CreativeCodingPage: React.FC = (props) => {
+import matter from "gray-matter";
+
+import fs from "fs";
+import {Post} from "@/main";
+
+type Props = SSRConfig & {
+    posts: Post[];
+};
+
+const CreativeCodingPage: React.FC<Props> = (props) => {
     const {t} = useTranslation("creative-coding");
     return (
         <>
@@ -31,7 +40,8 @@ const CreativeCodingPage: React.FC = (props) => {
                         </VStack>
                     </Box>
                 </Center>
-                <PostCollection></PostCollection>
+
+                <PostCollection posts={props.posts}></PostCollection>
             </Box>
         </>
     );
@@ -39,10 +49,34 @@ const CreativeCodingPage: React.FC = (props) => {
 
 export default CreativeCodingPage;
 
-export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
+export async function getStaticProps({
+    locale,
+}): Promise<GetStaticPropsResult<SSRConfig & {posts: Post[]}>> {
+    let posts = [];
+
+    try {
+        const files = fs.readdirSync("src/content");
+
+        const mappedPosts = files.map((fileName) => {
+            const slug = fileName.replace(".md", "");
+            const readFile = fs.readFileSync(`src/content/${fileName}`, "utf-8");
+            const {data: frontmatter} = matter(readFile);
+
+            return {
+                slug,
+                frontmatter,
+            };
+        });
+
+        posts = mappedPosts;
+    } catch (error) {
+        console.error(error);
+    }
+
     return {
         props: {
             ...(await serverSideTranslations(locale, ["creative-coding"])),
+            posts,
         },
     };
 }
