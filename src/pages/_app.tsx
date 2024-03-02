@@ -15,7 +15,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 <title>Vadim Gouskov | Web Developer &amp; Creative Coder</title>
                 <meta
                     property="description"
-                    content="I am Vadim: I love web development and creative coding. Combining those two passions I like to build things that are useful and/or beautiful. I also created a browser extension called Otli.io to help people avoid distracting content on the web."
+                    content="I am Vadim: I love web development and creative coding. Combining those two passions I like to build things that are useful and beautiful. I also created a browser extension called Otli.io to help people avoid distracting content on the web."
                     key="app-description"
                 ></meta>
                 <meta property="charset" content="UTF-8"></meta>
