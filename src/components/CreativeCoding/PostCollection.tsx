@@ -22,7 +22,7 @@ const PostCollection: React.FC<Props> = (props) => {
                                 category={post.frontmatter.category}
                                 media={post.frontmatter.cover}
                                 description={post.frontmatter.description}
-                                href={post.frontmatter.externalLink || `/${post.slug}`}
+                                href={post.frontmatter.externalLink || `posts/${post.slug}`}
                             />
                         );
                     })}
