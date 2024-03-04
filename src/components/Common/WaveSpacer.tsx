@@ -1,4 +1,4 @@
-import {Box, compose} from "@chakra-ui/react";
+import {Box} from "@chakra-ui/react";
 
 import {Text, TextProps} from "@chakra-ui/layout";
 import * as React from "react";

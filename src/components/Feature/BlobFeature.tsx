@@ -62,10 +62,10 @@ const BlobFeature: React.FC<FeatureProps> = ({
                         />
 
                         <Box p="5">
-                            <Heading size="2xl" mb="4" fontWeight="extrabold">
+                            <Heading size="2xl" mb="4" fontWeight="extrabold" color="white">
                                 {title}
                             </Heading>
-                            <Text fontSize={{base: "xl", md: "3xl"}} mb="6" maxW="md">
+                            <Text fontSize={{base: "lg", md: "3xl"}} mb="6" maxW="md" color="white">
                                 {text}
                             </Text>
                             <Link href={buttonHref} passHref>
