@@ -7,7 +7,7 @@ import React from "react";
 import {SSRConfig, appWithTranslation} from "next-i18next";
 import "../styles/main.css";
 
-const App: React.FC<AppProps> = ({Component, pageProps}) => {
+const App: React.FC<AppProps<SSRConfig>> = ({Component, pageProps}) => {
     return (
         <>
             <Head>
