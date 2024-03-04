@@ -57,16 +57,28 @@ export async function getStaticProps({
     try {
         const files = fs.readdirSync("src/content");
 
-        const mappedPosts = files.map((fileName) => {
-            const slug = fileName.replace(".md", "");
-            const readFile = fs.readFileSync(`src/content/${fileName}`, "utf-8");
-            const {data: frontmatter} = matter(readFile);
+        const mappedPosts = files
+            .filter((fileName) => {
+                const file = fs.readFileSync(`src/content/${fileName}`, "utf-8");
+                const {data: frontmatter, content} = matter(file);
 
-            return {
-                slug,
-                frontmatter,
-            };
-        });
+                if (frontmatter.draft == true) {
+                    return false;
+                }
+
+                return true;
+            })
+
+            .map((fileName) => {
+                const slug = fileName.replace(".md", "");
+                const readFile = fs.readFileSync(`src/content/${fileName}`, "utf-8");
+                const {data: frontmatter} = matter(readFile);
+
+                return {
+                    slug,
+                    frontmatter,
+                };
+            });
 
         posts = mappedPosts;
     } catch (error) {

@@ -5,15 +5,28 @@ import md from "markdown-it";
 
 export async function getStaticPaths() {
     try {
-        const files = fs.readdirSync("src/content");
+        const fileNames = fs.readdirSync("src/content");
 
-        const paths = files.map((fileName) => ({
-            params: {
-                slug: fileName.replace(".md", ""),
-            },
-        }));
+        const paths = fileNames
+            .filter((fileName) => {
+                const file = fs.readFileSync(`src/content/${fileName}`, "utf-8");
+                const {data: frontmatter, content} = matter(file);
 
-        console.log(paths);
+                if (frontmatter.draft == true) {
+                    return false;
+                }
+
+                if (frontmatter.externalLink) {
+                    return false;
+                }
+
+                return true;
+            })
+            .map((fileName) => ({
+                params: {
+                    slug: fileName.replace(".md", ""),
+                },
+            }));
 
         return {
             paths,
