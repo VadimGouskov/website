@@ -1,6 +1,7 @@
 ---
 title: Manipulating SVGs using SVG.js
 description: A JavaScript library that makes creating and manipulating SVG elements more straight-forward, readable and versatile.
+cover: /posts/svgjs-logo.jpeg
 ---
 
 # Manipulating SVGs using SVG.js
