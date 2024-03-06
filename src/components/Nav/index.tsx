@@ -7,7 +7,7 @@ import {useRouter} from "next/router";
 import {WaveSpacer} from "../Common/WaveSpacer";
 
 const Nav: React.FC = () => {
-    const SKILLSET_PATH = "skillset";
+    const ABOUT_ME_PATH = "about-me";
     const CREATIVE_CODING_PATH = "creative-coding";
 
     const router = useRouter();
@@ -27,11 +27,11 @@ const Nav: React.FC = () => {
                         Home
                     </NavLink>
                     <NavLink
-                        isActive={getIsActive(SKILLSET_PATH)}
-                        href={SKILLSET_PATH}
+                        isActive={getIsActive(ABOUT_ME_PATH)}
+                        href={ABOUT_ME_PATH}
                         onClick={disclosure.onClose}
                     >
-                        Skillset / CV
+                        About Me
                     </NavLink>
                     <NavLink
                         isActive={getIsActive(CREATIVE_CODING_PATH)}
@@ -40,7 +40,7 @@ const Nav: React.FC = () => {
                     >
                         Creative Coding
                     </NavLink>
-                    <NavLink href={`${SKILLSET_PATH}#contact-section`} onClick={disclosure.onClose}>
+                    <NavLink href={`${ABOUT_ME_PATH}#contact-section`} onClick={disclosure.onClose}>
                         Contact
                     </NavLink>
                 </Navbar.Links>

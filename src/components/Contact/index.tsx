@@ -23,7 +23,6 @@ const Contact: React.FC = () => {
                 <Link href="https://www.linkedin.com/in/vadim-gouskov-00aaa2107/" passHref>
                     <Button
                         leftIcon={<AiFillLinkedin />}
-                        width={{base: "100%", sm: "66%"}}
                         mt="8"
                         as="a"
                         size="lg"
@@ -39,7 +38,6 @@ const Contact: React.FC = () => {
                 <Link href="https://www.instagram.com/vadim.gouskov/" passHref>
                     <Button
                         leftIcon={<AiFillInstagram />}
-                        width={{base: "100%", sm: "66%"}}
                         mt="8"
                         as="a"
                         size="lg"

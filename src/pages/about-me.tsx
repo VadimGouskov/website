@@ -12,7 +12,7 @@ import Head from "next/head";
 
 interface Props {}
 
-const SkillSetPage: React.FC<Props> = (props) => {
+const AboutMePage: React.FC<Props> = (props) => {
     const {t} = useTranslation("skillset");
 
     return (
@@ -125,7 +125,7 @@ const SkillSetPage: React.FC<Props> = (props) => {
     );
 };
 
-export default SkillSetPage;
+export default AboutMePage;
 
 export async function getStaticProps({locale}): Promise<GetStaticPropsResult<any>> {
     return {
