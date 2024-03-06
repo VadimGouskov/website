@@ -1,5 +1,4 @@
-import {Box, Button, Heading, Text, VStack} from "@chakra-ui/react";
-import Link from "next/link";
+import {Box, Button, Heading, Link, Text, VStack} from "@chakra-ui/react";
 import * as React from "react";
 import {AiFillInstagram, AiFillLinkedin} from "react-icons/ai";
 
@@ -20,11 +19,10 @@ const Contact: React.FC = () => {
                 Contact me and I will get in touch with you asap.
             </Text>
             <VStack>
-                <Link href="https://www.linkedin.com/in/vadim-gouskov-00aaa2107/" passHref>
+                <Link href="https://www.linkedin.com/in/vadim-gouskov-00aaa2107/" isExternal>
                     <Button
                         leftIcon={<AiFillLinkedin />}
                         mt="8"
-                        as="a"
                         size="lg"
                         fontWeight="bold"
                         backgroundColor="#2867B2"
@@ -35,11 +33,10 @@ const Contact: React.FC = () => {
                     </Button>
                 </Link>
 
-                <Link href="https://www.instagram.com/vadim.gouskov/" passHref>
+                <Link href="https://www.instagram.com/vadim.gouskov/" isExternal>
                     <Button
                         leftIcon={<AiFillInstagram />}
                         mt="8"
-                        as="a"
                         size="lg"
                         fontWeight="bold"
                         backgroundColor="#833AB4"
