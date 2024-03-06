@@ -7,7 +7,6 @@ import React from "react";
 import {SSRConfig, appWithTranslation} from "next-i18next";
 import "../styles/main.css";
 import {useRouter} from "next/router";
-
 import * as Fathom from "fathom-client";
 
 const App: React.FC<AppProps<SSRConfig>> = ({Component, pageProps}) => {
@@ -17,7 +16,7 @@ const App: React.FC<AppProps<SSRConfig>> = ({Component, pageProps}) => {
         //  - Do not include https://
         //  - This must be an exact match of your domain.
         //  - If you're using www. for your domain, make sure you include that here.
-        Fathom.load("EEGISLNF", {
+        Fathom.load("HTMQYAEU", {
             includedDomains: ["vadimgouskov.com", "www.vadimgouskov.com"],
         });
 
