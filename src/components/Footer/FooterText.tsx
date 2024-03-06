@@ -11,7 +11,7 @@ import * as React from "react";
 const FooterText: React.FC<HTMLChakraProps<"svg">> = (props) => {
     const [white, black] = useToken("colors", ["white", "gray.800"]);
     return (
-        <Box>
+        <Box wordBreak={"break-all"}>
             This website is built using amazing tools like:&nbsp;
             <ChakraLink href="https://nextjs.org/" isExternal>
                 Next.js
