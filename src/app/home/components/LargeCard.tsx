@@ -2,15 +2,36 @@ import * as React from "react";
 import Image from "next/image";
 
 type LargeCardProps = {
-  alt: string;
+  title?: string;
+  image: {
+    src: string;
+    alt: string;
+  };
 };
 
-export const LargeCard: React.FC<LargeCardProps> = ({ alt }) => {
+export const LargeCard: React.FC<LargeCardProps> = ({ image, title }) => {
   return (
-    <div className="size-200">
-      <div></div>
-      <div className="relative h-full ">
-        <Image fill src="/no-data-test.jpg" alt={alt} />
+    <div className="relative  w-full h-full aspect-square hover:[&>.hover-effect]:scale-110">
+      <div
+        className="hover-effect bg-amber-100 absolute top-0 left-0 h-full w-full -z-10 transition-transform
+"
+      ></div>
+      <div className="h-full rounded-sm overflow-hidden">
+        <div className="h-full border rounded-sm overflow-hidden ">
+          {title && (
+            <div className="p-1 text-xl bg-white ">
+              <h2>{title}</h2>
+            </div>
+          )}
+          <div className="relative h-full ">
+            <Image
+              className="object-cover"
+              fill
+              src={image.src}
+              alt={image.alt}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
