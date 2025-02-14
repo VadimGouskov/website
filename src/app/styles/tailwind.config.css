@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 8rem;
+  --spacing-xxxl: 16rem;
+
+  /* Colors */
+  --color-primary: #ffe8d8;
+  --color-secondary: #FA13FF;
+  --color-default: #000000;
+  --color-accent-primary: #5DEFCC;
+  --color-accent-secondary: #FFA500;
+  --color-white: #ffffff;
+  --color-gray-50: #F9F8F9;
+  --color-gray-100: #e5e5e9;
+  --color-gray-200: #ccccd5;
+  --color-gray-300: #9999a8;
+  --color-gray-400: #808093;
+  --color-gray-500: #66667d;
+  --color-gray-600: #4c4c67;
+  --color-gray-700: #333352;
+  --color-gray-800: #1a1a3c;
+  --color-gray-900: #000026;
+  --color-black: #000013;
+
+  /* Font Sizes */
+  --text-sm: 0.8rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.563rem;
+  --text-xxl: 1.953rem;
+  --text-xxxl: 2.441rem;
+  --text-xxxxl: 4.052rem;
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Border Radius */
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-full: 9999px;
+
+  /* Box Shadows */
+  --shadow-sm: 5px 5px 25px #ccccd5;
+  --shadow-md: 10px 10px 50px #ccccd5;
+
+  /* Breakpoints */
+  --breakpoint-tablet: 37.5rem; /* 600px */
+  --breakpoint-laptop: 59.375rem; /* 950px */
+  --breakpoint-desktop: 81.25rem; /* 1300px */
+  --breakpoint-ultra-wide: 121.25rem; /* 1940px */
+
+}
