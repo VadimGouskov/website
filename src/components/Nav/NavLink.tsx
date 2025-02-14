@@ -13,12 +13,12 @@ export const NavLink: React.FC<NavLinkProps> = ({href, isActive, onClick, ...res
             py={2}
             px={3}
             borderRadius="md"
-            transition="all 0.3s"
+            transition="background-color 0.3s, color 0.3s"
             fontWeight="medium"
             lineHeight="1.25rem"
             aria-current={isActive ? "page" : undefined}
             color="white"
-            _hover={{bg: "white", color: "black"}}
+            _hover={{bg: "white", color: "black", transition: "background-color 0.3s, color 0.3s"}}
             _activeLink={{
                 bg: "white",
                 color: "black",
