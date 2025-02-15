@@ -15,40 +15,42 @@ export default async function Home() {
   return (
     <Container className="mt-4">
       {works.map((work, index) => (
-        <GridSection
-          key={`work-${work.title}-${index}`}
-          highlightSlot={
-            <CardBackdrop>
-              <LargeCard
-                title={work.title}
-                image={{
-                  src: work.coverImage.src,
-                  alt: work.coverImage.alt,
-                }}
-              />
-            </CardBackdrop>
-          }
-        >
-          <div className="flex flex-col gap-2 h-full aspect-square md:aspect-auto">
-            {work.images.map((tile, imageIndex) => (
-              <div key={`image-${imageIndex}`} className="flex-auto">
-                <CardBackdrop>
-                  <ImageTile
-                    image={{
-                      src: tile.src,
-                      alt: tile.alt,
-                    }}
-                  />
-                </CardBackdrop>
+        <section className="mt-10" key={`work-${work.title}-${index}`}>
+          <GridSection
+            layout={work.layout}
+            highlightSlot={
+              <CardBackdrop>
+                <LargeCard
+                  title={work.title}
+                  image={{
+                    src: work.coverImage.src,
+                    alt: work.coverImage.alt,
+                  }}
+                />
+              </CardBackdrop>
+            }
+          >
+            <div className="flex flex-col gap-2 h-full aspect-square md:aspect-auto">
+              {work.images.map((tile, imageIndex) => (
+                <div key={`image-${imageIndex}`} className="flex-auto">
+                  <CardBackdrop>
+                    <ImageTile
+                      image={{
+                        src: tile.src,
+                        alt: tile.alt,
+                      }}
+                    />
+                  </CardBackdrop>
+                </div>
+              ))}
+              <div className="">
+                <Tile>
+                  <div className="p-4">Test</div>
+                </Tile>
               </div>
-            ))}
-            <div className="">
-              <Tile>
-                <div className="p-4">Test</div>
-              </Tile>
             </div>
-          </div>
-        </GridSection>
+          </GridSection>
+        </section>
       ))}
     </Container>
   );

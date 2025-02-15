@@ -8,4 +8,7 @@ interface Work {
   description: string;
   coverImage: Image;
   images: Image[];
+  layout?: Layout;
 }
+
+type Layout = "cover-right" | "cover-left";
