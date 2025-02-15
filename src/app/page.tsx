@@ -1,12 +1,13 @@
 import * as React from "react";
-import { LargeCard } from "./home/components/LargeCard";
 import { Container } from "./components/Container";
 import { CardBackdrop } from "./components/Card/CardBackdrop";
 import { ImageTile } from "./components/Tile/ImageTile";
+import { Tile } from "./components/Tile/Tile";
+import { LargeCard } from "./components/Card/LargeCard";
 
 export default function Home() {
   return (
-    <Container>
+    <Container className="mt-4">
       <div className="flex flex-col md:flex-row-reverse gap-2 md:aspect-video ">
         <div>
           <CardBackdrop>
@@ -40,6 +41,12 @@ export default function Home() {
                   }}
                 />
               </CardBackdrop>
+            </div>
+
+            <div className="">
+              <Tile>
+                <div className="p-4">Contact</div>
+              </Tile>
             </div>
           </div>
         </div>

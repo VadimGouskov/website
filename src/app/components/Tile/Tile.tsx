@@ -4,5 +4,9 @@ type TileProps = {
 };
 
 export const Tile: React.FC<TileProps> = ({ children }) => {
-  return <div className="border rounded-lg hover:text-3xl">{children}</div>;
+  return (
+    <div className="flex border rounded-lg bg-white hover:bg-linear-to-br to-blue-900 from-blue-100">
+      <div>{children}</div>
+    </div>
+  );
 };
