@@ -1,56 +1,55 @@
 import * as React from "react";
 import { Container } from "./components/Container";
+
+import { GridSection } from "./home/components/GridSection";
 import { CardBackdrop } from "./components/Card/CardBackdrop";
+import { LargeCard } from "./components/Card/LargeCard";
 import { ImageTile } from "./components/Tile/ImageTile";
 import { Tile } from "./components/Tile/Tile";
-import { LargeCard } from "./components/Card/LargeCard";
+import { getHomeData } from "./home/repo/getHomeData";
 
-export default function Home() {
+export default async function Home() {
+  const data = await getHomeData();
+
+  const works = data.works;
   return (
     <Container className="mt-4">
-      <div className="flex flex-col md:flex-row-reverse gap-2 md:aspect-video ">
-        <div>
-          <CardBackdrop>
-            <LargeCard
-              title="No Data: Algorithmic sculptures"
-              image={{
-                src: "/no-data-test.jpg",
-                alt: "hero",
-              }}
-            />
-          </CardBackdrop>
-        </div>
-        <div className="flex-auto">
+      {works.map((work, index) => (
+        <GridSection
+          key={`work-${work.title}-${index}`}
+          highlightSlot={
+            <CardBackdrop>
+              <LargeCard
+                title={work.title}
+                image={{
+                  src: work.coverImage.src,
+                  alt: work.coverImage.alt,
+                }}
+              />
+            </CardBackdrop>
+          }
+        >
           <div className="flex flex-col gap-2 h-full aspect-square md:aspect-auto">
-            <div className="flex-auto">
-              <CardBackdrop>
-                <ImageTile
-                  image={{
-                    src: "/no-data-2.jpg",
-                    alt: "hero",
-                  }}
-                />
-              </CardBackdrop>
-            </div>
-            <div className="flex-auto">
-              <CardBackdrop>
-                <ImageTile
-                  image={{
-                    src: "/no-data-3.jpg",
-                    alt: "hero",
-                  }}
-                />
-              </CardBackdrop>
-            </div>
-
+            {work.images.map((tile, imageIndex) => (
+              <div key={`image-${imageIndex}`} className="flex-auto">
+                <CardBackdrop>
+                  <ImageTile
+                    image={{
+                      src: tile.src,
+                      alt: tile.alt,
+                    }}
+                  />
+                </CardBackdrop>
+              </div>
+            ))}
             <div className="">
               <Tile>
-                <div className="p-4">Contact</div>
+                <div className="p-4">Test</div>
               </Tile>
             </div>
           </div>
-        </div>
-      </div>
+        </GridSection>
+      ))}
     </Container>
   );
 }

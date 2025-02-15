@@ -1,34 +1,31 @@
 {
-  "hero": {
-    "title": "Computational Neuropsychiatry",
-    "subtitle": "This is the subtitle where you explain the goals of the group",
-    "image": "/assets/brain.jpg",
-    "partners": [
-      {
-        "name": "Partner 1",
-        "logo": "/assets/logos/logoipsum1.svg"
-      },
-      {
-        "name": "Partner 2",
-        "logo": "/assets/logos/logoipsum2.svg"
-      },
-      {
-        "name": "Partner 3",
-        "logo": "/assets/logos/logoipsum3.svg"
-      },
-      {
-        "name": "Partner 4",
-        "logo": "/assets/logos/logoipsum4.svg"
-      },
-      {
-        "name": "Partner 5",
-        "logo": "/assets/logos/logoipsum5.svg"
-      }
-    ]
+  "meta": {
+    "title": "Home",
+    "description": "Home page of the website",
+    "ogImage": {
+      "src": "/no-data-test.jpg",
+      "alt": "Home"
+    },
+    "ogUrl": "https://www.vadimgouskov.com"
   },
-  "mission": {
-    "title": "Our mission",
-    "body": "Cum ceteris in veneratione tui montes, nascetur mus. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Plura mihi bona sunt, inclinet, amari petere vellent. Quisque placerat facilisis egestas cillum dolore. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Hi omnes lingua, institutis, legibus inter se differunt. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.",
-    "image": "/assets/brain.jpg"
-  }
+  "works": [
+    {
+      "title": "No Data: Algorithmic sculptures",
+      "description": "This is the description",
+      "coverImage": {
+        "src": "/no-data-test.jpg",
+        "alt": "No Data: Algorithmic sculptures"
+      },
+      "images": [
+        {
+          "src": "/no-data-2.jpg",
+          "alt": "No Data: Algorithmic sculptures"
+        },
+        {
+          "src": "/no-data-3.jpg",
+          "alt": "No Data: Algorithmic sculptures"
+        }
+      ]
+    }
+  ]
 }

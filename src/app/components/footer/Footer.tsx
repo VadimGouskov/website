@@ -1,6 +1,11 @@
 import * as React from "react";
+import { Container } from "../Container";
 type FooterProps = {};
 
 export const Footer: React.FC<FooterProps> = () => {
-  return <div>footer</div>;
+  return (
+    <Container>
+      <div className="">footer</div>
+    </Container>
+  );
 };
