@@ -1,8 +1,8 @@
 import * as React from "react";
 import { LargeCard } from "./home/components/LargeCard";
 import { Container } from "./components/Container";
-import { ImageTile } from "./home/components/ImageTile";
 import { CardBackdrop } from "./components/Card/CardBackdrop";
+import { ImageTile } from "./components/Tile/ImageTile";
 
 export default function Home() {
   return (
