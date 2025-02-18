@@ -1,6 +1,6 @@
 import { promises as fs } from "fs";
 
-const loadDir = async (path: string): Promise<Record<string, any>> => {
+export const loadDir = async (path: string): Promise<string[]> => {
   const fileNames = await fs.readdir(path);
 
   return fileNames;

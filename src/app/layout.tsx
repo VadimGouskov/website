@@ -2,7 +2,7 @@ import "./styles/globals.css";
 import "./styles/tailwind.config.css";
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
-import { Footer } from "./components/footer/Footer";
+import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 
 const sansFont = Fira_Code({
