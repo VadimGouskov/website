@@ -1,11 +1,11 @@
-import data from "./data.json";
+import { loadFile } from "@/lib/file-loader/loadFile";
+import { projectBasePath } from "@/lib/file-loader/project-base-path";
+import { parseFrontMatter } from "@/lib/markdown-parser/parse";
 
 export const getHomeData = async (): Promise<HomeData> => {
-  const result = new Promise<HomeData>((resolve) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 1000);
-  });
+  const file = await loadFile(projectBasePath + "/content/works/no-data.md");
 
-  return result;
+  const frontMatter = await parseFrontMatter(file);
+
+  return { works: [frontMatter] };
 };

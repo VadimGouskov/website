@@ -11,10 +11,9 @@ import { getHomeData } from "./home/repo/getHomeData";
 export default async function Home() {
   const data = await getHomeData();
 
-  const works = data.works;
   return (
     <Container className="mt-4">
-      {works.map((work, index) => (
+      {data.works.map((work, index) => (
         <section className="mt-10" key={`work-${work.title}-${index}`}>
           <GridSection
             layout={work.layout}
