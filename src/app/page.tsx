@@ -7,6 +7,21 @@ import { LargeCard } from "./components/Card/LargeCard";
 import { ImageTile } from "./components/Tile/ImageTile";
 import { Tile } from "./components/Tile/Tile";
 import { getHomeData } from "./home/repo/getHomeData";
+import { Metadata, ResolvingMetadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const data = await getHomeData();
+
+  return {
+    title: data.meta.title,
+    openGraph: {
+      images: data.meta.openGraphImages.map((image) => ({
+        url: image.src,
+        alt: image.alt,
+      })),
+    },
+  };
+}
 
 export default async function Home() {
   const data = await getHomeData();

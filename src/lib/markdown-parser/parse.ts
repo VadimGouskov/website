@@ -5,33 +5,33 @@ import { frontmatter, frontmatterHtml } from "micromark-extension-frontmatter";
 import yaml from "js-yaml";
 
 // Function to parse frontmatter and markdown content
-const strToMarkdown = (value: string) => {
+const strToMarkdown = <T>(value: string) => {
   const tree = fromMarkdown(value, {
     extensions: [frontmatter()],
     mdastExtensions: [frontmatterFromMarkdown()],
   });
   const firstChild = tree.children[0];
-  let frontMatter = {};
+  let frontMatter = {} as T;
 
   // Step 3: Check if the first child is of type 'yaml'
   if (firstChild && firstChild.type === "yaml") {
     // Step 4: Parse the YAML frontmatter using yaml.safeLoad
-    frontMatter = yaml.load(firstChild.value) as {};
+    frontMatter = yaml.load(firstChild.value) as T;
   } else {
     // Optional: You could leave this else block empty since frontMatter is already initialized as an empty object
-    frontMatter = {};
+    frontMatter = T;
   }
   return { frontMatter };
 };
 
 // Function to parse the Markdown content and convert it to HTML
-export const parseFrontMatter = async (content: string) => {
+export const parseFrontMatter = async <T>(content: string) => {
   try {
-    const { frontMatter } = strToMarkdown(content);
+    const { frontMatter } = strToMarkdown<T>(content);
     return frontMatter;
   } catch (error) {
     console.error("Error reading or parsing the file:", error);
-    return "";
+    return {} as T;
   }
 };
 

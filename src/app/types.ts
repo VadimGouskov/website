@@ -6,6 +6,6 @@ interface Image {
 interface Meta {
   title: string;
   description: string;
-  ogImage: Image;
+  openGraphImages: Image[];
   ogUrl: string;
 }
