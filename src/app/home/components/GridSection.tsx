@@ -12,9 +12,9 @@ export const GridSection: React.FC<GridSectionProps> = ({
   layout,
 }) => {
   const flexDirection =
-    layout === "cover-left" ? "flex-row" : "flex-row-reverse";
+    layout === "cover-left" ? "md:flex-row" : "md:flex-row-reverse";
   return (
-    <div className={`flex flex-col md:${flexDirection} gap-2 md:aspect-video`}>
+    <div className={`flex flex-col ${flexDirection} gap-2 md:aspect-video`}>
       <div>{highlightSlot}</div>
       <div className="flex-auto">{children}</div>
     </div>
