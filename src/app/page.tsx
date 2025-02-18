@@ -30,7 +30,7 @@ export default async function Home() {
             }
           >
             <div className="flex flex-col gap-2 h-full aspect-square md:aspect-auto">
-              {work.images.map((tile, imageIndex) => (
+              {work.featuredImages.map((tile, imageIndex) => (
                 <div key={`image-${imageIndex}`} className="flex-auto">
                   <CardBackdrop>
                     <ImageTile

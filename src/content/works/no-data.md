@@ -4,7 +4,7 @@ description: This is the description
 coverImage:
   src: /no-data-test.jpg
   alt: "No Data: Algorithmic sculptures"
-images:
+featuredImages:
   - src: /no-data-2.jpg
     alt: "No Data: Algorithmic sculptures"
   - src: /no-data-3.jpg

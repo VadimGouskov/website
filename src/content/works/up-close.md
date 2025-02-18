@@ -5,7 +5,7 @@ layout: cover-left
 coverImage:
   src: /up-close/up-close.jpg
   alt: "No Data: Algorithmic sculptures"
-images:
+featuredImages:
   - src: /up-close/up-close-2.jpg
     alt: "No Data: Algorithmic sculptures"
   - src: /up-close/up-close-3.png
