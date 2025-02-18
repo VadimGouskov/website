@@ -45,7 +45,9 @@ export default async function Home() {
               ))}
               <div className="">
                 <Tile>
-                  <div className="p-4">Test</div>
+                  <div className="p-4 flex justify-center items-center text-xl">
+                    <span>Learn more</span>
+                  </div>
                 </Tile>
               </div>
             </div>

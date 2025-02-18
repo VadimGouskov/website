@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -34,6 +33,8 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+
+  font-family: "Fira Code", sans-serif;
 }
 
 /*
