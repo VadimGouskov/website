@@ -59,7 +59,7 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
           </Link>
           <Link className="flex-auto" href={"#about"}>
             <Tile>
-              <div className="p-2">About</div>
+              <div className="p-2">Description</div>
             </Tile>
           </Link>
           <Link className="flex-auto" href={"#details"}>
