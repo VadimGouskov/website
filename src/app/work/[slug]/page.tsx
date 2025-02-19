@@ -10,6 +10,7 @@ import { GridSection } from "@/app/home/components/GridSection";
 import { LargeCard } from "@/app/components/Card/LargeCard";
 import { ImageTile } from "@/app/components/Tile/ImageTile";
 import Image from "next/image";
+import { Tile } from "@/app/components/Tile/Tile";
 
 type WorkPageProps = {
   params: { slug: string };
@@ -49,7 +50,25 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
   return (
     <main className="mt-2">
       <Container>
-        <section>
+        <div className="flex flex-col md:flex-row gap-1">
+          <Link href={"#"}>
+            <Tile>
+              <div className="p-2">Back</div>
+            </Tile>
+          </Link>
+          <Link className="flex-auto" href={"#"}>
+            <Tile>
+              <div className="p-2">About</div>
+            </Tile>
+          </Link>
+          <Link className="flex-auto" href={"#"}>
+            <Tile>
+              <div className="p-2">Details</div>
+            </Tile>
+          </Link>
+        </div>
+
+        <section className="mt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-2">
             {seriesWorks.map((work, index) => (
               <div key={`${work.slug}-${index}`}>

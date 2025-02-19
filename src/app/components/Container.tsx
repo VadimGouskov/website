@@ -8,5 +8,7 @@ export const Container: React.FC<ContainerProps> = ({
   children,
   className,
 }) => {
-  return <div className={`container mx-auto ${className}`}>{children}</div>;
+  return (
+    <div className={`container mx-auto px-1 ${className}`}>{children}</div>
+  );
 };
