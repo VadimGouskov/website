@@ -6,12 +6,12 @@ import { loadFile } from "@/lib/file-loader/loadFile";
 
 const worksPath = projectBasePath + "/content/series";
 
-export const getWorks = async (): Promise<Series[]> => {
+export const getAllSeries = async (): Promise<Series[]> => {
   const dir = await loadDir(worksPath);
   const series = (await Promise.all(
     dir
       .map(async (fileName) => {
-        const file = await loadFile(`${worksPath}/${fileName}`);
+        const file = await loadFile(`${worksPath}/${fileName}/index.md`);
 
         if (!file) {
           return null;

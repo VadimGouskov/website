@@ -7,7 +7,7 @@ import { LargeCard } from "./components/Card/LargeCard";
 import { ImageTile } from "./components/Tile/ImageTile";
 import { Tile } from "./components/Tile/Tile";
 import { getHomeData } from "./home/repo/getHomeData";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {

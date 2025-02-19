@@ -1,6 +1,6 @@
 import * as React from "react";
-import { getWorks } from "../repo/getWorks";
-import { getWork } from "../repo/getWork";
+import { getAllSeries } from "../repo/getAllSeries";
+import { getSeries } from "../repo/getSeries";
 import { Container } from "@/app/components/Container";
 import Link from "next/link";
 import { Markdown } from "@/app/components/Markdown/Markdown";
@@ -9,7 +9,7 @@ type WorkPageProps = {
 };
 
 export async function generateStaticParams() {
-  const allWorks = await getWorks();
+  const allWorks = await getAllSeries();
 
   return allWorks.map((work) => ({
     slug: work.slug,
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
   const { slug } = await params;
 
-  const work = await getWork(slug);
+  const work = await getSeries(slug);
 
   if (!work) {
     return (

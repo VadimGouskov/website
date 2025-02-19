@@ -6,14 +6,14 @@ import { HomeData, HomeIndexContent } from "./types";
 import { Series, SeriesContent } from "@/app/work/repo/types";
 
 const homePath = projectBasePath + "/content/home";
-const worksPath = projectBasePath + "/content/series";
+const seriesPath = projectBasePath + "/content/series";
 
 export const getHomeData = async (): Promise<HomeData> => {
-  const dir = await loadDir(worksPath);
+  const dir = await loadDir(seriesPath);
 
   const series = await Promise.all(
     dir.map(async (fileName) => {
-      const file = await loadFile(`${worksPath}/${fileName}`);
+      const file = await loadFile(`${seriesPath}/${fileName}/index.md`);
       const frontMatter = await parseFrontMatter<SeriesContent>(file);
 
       return frontMatter;
