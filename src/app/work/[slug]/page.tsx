@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   }));
 }
 
-const WorkContent: React.FC<WorkPageProps> = async ({ params }) => {
+const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
   const { slug } = await params;
 
   const work = await getWork(slug);
@@ -25,12 +25,12 @@ const WorkContent: React.FC<WorkPageProps> = async ({ params }) => {
     return (
       <Container>
         <div>
-          Work not found&nbsp;
+          Series not found&nbsp;
           <Link
             href={"/"}
             className="text-blue-900 underline underline-offset-4"
           >
-            Check other works
+            Check other series
           </Link>
         </div>
       </Container>
@@ -55,4 +55,4 @@ const WorkContent: React.FC<WorkPageProps> = async ({ params }) => {
   );
 };
 
-export default WorkContent;
+export default SeriesContent;

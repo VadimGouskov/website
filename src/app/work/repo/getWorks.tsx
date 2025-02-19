@@ -1,14 +1,14 @@
 import { projectBasePath } from "@/lib/file-loader/project-base-path";
-import { Work, WorkContent, WorkData } from "./types";
+import { Series, SeriesContent, SeriesData } from "./types";
 import { parseFrontMatter } from "@/lib/markdown-parser/parse";
 import { loadDir } from "@/lib/file-loader/loadDir";
 import { loadFile } from "@/lib/file-loader/loadFile";
 
-const worksPath = projectBasePath + "/content/works";
+const worksPath = projectBasePath + "/content/series";
 
-export const getWorks = async (): Promise<Work[]> => {
+export const getWorks = async (): Promise<Series[]> => {
   const dir = await loadDir(worksPath);
-  const works = (await Promise.all(
+  const series = (await Promise.all(
     dir
       .map(async (fileName) => {
         const file = await loadFile(`${worksPath}/${fileName}`);
@@ -17,12 +17,12 @@ export const getWorks = async (): Promise<Work[]> => {
           return null;
         }
 
-        const frontMatter = await parseFrontMatter<WorkContent>(file);
+        const frontMatter = await parseFrontMatter<SeriesContent>(file);
 
         return frontMatter;
       })
       .filter((work) => work !== null)
-  )) as Work[];
+  )) as Series[];
 
-  return works;
+  return series;
 };

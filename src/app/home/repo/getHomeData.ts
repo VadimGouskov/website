@@ -3,18 +3,18 @@ import { loadFile } from "@/lib/file-loader/loadFile";
 import { projectBasePath } from "@/lib/file-loader/project-base-path";
 import { parseFrontMatter } from "@/lib/markdown-parser/parse";
 import { HomeData, HomeIndexContent } from "./types";
-import { Work, WorkContent } from "@/app/work/repo/types";
+import { Series, SeriesContent } from "@/app/work/repo/types";
 
 const homePath = projectBasePath + "/content/home";
-const worksPath = projectBasePath + "/content/works";
+const worksPath = projectBasePath + "/content/series";
 
 export const getHomeData = async (): Promise<HomeData> => {
   const dir = await loadDir(worksPath);
 
-  const works = await Promise.all(
+  const series = await Promise.all(
     dir.map(async (fileName) => {
       const file = await loadFile(`${worksPath}/${fileName}`);
-      const frontMatter = await parseFrontMatter<WorkContent>(file);
+      const frontMatter = await parseFrontMatter<SeriesContent>(file);
 
       return frontMatter;
     })
@@ -23,5 +23,5 @@ export const getHomeData = async (): Promise<HomeData> => {
   const homeIndex = await loadFile(`${homePath}/index.md`);
   const { meta, slug } = await parseFrontMatter<HomeIndexContent>(homeIndex);
 
-  return { slug, meta, works };
+  return { slug, meta, series };
 };

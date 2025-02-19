@@ -174,4 +174,4 @@ git push
 
 ## Conclusion
 
-This document provides an overview of how to edit the content of your website using the CloudCannon web interface and a local text editor and git. Both methods have their advantages and disadvantages, and you can choose the one that works best for you. If you have any questions or need help, feel free to reach out
+This document provides an overview of how to edit the content of your website using the CloudCannon web interface and a local text editor and git. Both methods have their advantages and disadvantages, and you can choose the one that series best for you. If you have any questions or need help, feel free to reach out

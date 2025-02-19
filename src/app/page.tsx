@@ -31,7 +31,7 @@ export default async function Home() {
 
   return (
     <Container className="mt-4">
-      {data.works.map((work, index) => (
+      {data.series.map((work, index) => (
         <section className="mt-10" key={`work-${work.title}-${index}`}>
           <GridSection
             layout={work.layout}

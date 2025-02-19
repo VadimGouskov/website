@@ -1,4 +1,4 @@
-export interface Work {
+export interface Series {
   slug: string;
   title: string;
   description: string;
@@ -9,10 +9,10 @@ export interface Work {
   content?: string;
 }
 
-export interface WorkContent extends Work, PageContent {}
+export interface SeriesContent extends Series, PageContent {}
 
-export interface WorkData extends PageData {
-  works: Work[];
+export interface SeriesData extends PageData {
+  series: Series[];
   content?: string;
 }
 
