@@ -9,10 +9,7 @@ type WorkPageProps = {
 };
 
 export async function generateStaticParams() {
-  console.log("generateStaticParams");
   const allWorks = await getWorks();
-
-  console.log(allWorks);
 
   return allWorks.map((work) => ({
     slug: work.slug,
@@ -20,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 const WorkContent: React.FC<WorkPageProps> = async ({ params }) => {
-  const { slug } = params;
+  const { slug } = await params;
 
   const work = await getWork(slug);
 
