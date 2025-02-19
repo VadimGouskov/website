@@ -3,6 +3,7 @@ import { getWorks } from "../repo/getWorks";
 import { getWork } from "../repo/getWork";
 import { Container } from "@/app/components/Container";
 import Link from "next/link";
+import { Markdown } from "@/app/components/Markdown/Markdown";
 type WorkPageProps = {
   params: { slug: string };
 };
@@ -30,7 +31,7 @@ const WorkContent: React.FC<WorkPageProps> = async ({ params }) => {
           Work not found&nbsp;
           <Link
             href={"/"}
-            className="text-blue-900 underline underline-offset-5"
+            className="text-blue-900 underline underline-offset-4"
           >
             Check other works
           </Link>
@@ -43,11 +44,14 @@ const WorkContent: React.FC<WorkPageProps> = async ({ params }) => {
     <main>
       <Container>
         {work.content && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: work.content,
-            }}
-          ></div>
+          <Markdown>
+            <div
+              className="markdown"
+              dangerouslySetInnerHTML={{
+                __html: work.content,
+              }}
+            ></div>
+          </Markdown>
         )}
       </Container>
     </main>
