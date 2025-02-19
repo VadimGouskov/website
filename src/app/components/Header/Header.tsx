@@ -8,7 +8,7 @@ export const Header: React.FC<HeaderProps> = () => {
   return (
     <Container>
       <div className="flex mt-2 gap-2">
-        <div className="p-4 border rounded-lg bg-white flex-auto ">
+        <div className="vg-border vg-rounded p-4  bg-white flex-auto ">
           <Link href={"/"} className="text-xl font-thin leading-none">
             VADIM GOUSKOV
           </Link>

@@ -11,8 +11,8 @@ type LargeCardProps = {
 
 export const LargeCard: React.FC<LargeCardProps> = ({ image, title }) => {
   return (
-    <div className="relative h-full aspect-square rounded-sm overflow-hidden ">
-      <div className="h-full border rounded-sm overflow-hidden ">
+    <div className="relative h-full aspect-square vg-rounded overflow-hidden ">
+      <div className="h-full vg-border vg-rounded overflow-hidden ">
         {title && (
           <div className="p-1 text-xl bg-white ">
             <h2>{title}</h2>
