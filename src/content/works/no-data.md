@@ -1,4 +1,5 @@
 ---
+slug: "no-data"
 title: "No Data: Algorithmic sculptures"
 description: This is the description
 coverImage:

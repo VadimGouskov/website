@@ -19,7 +19,7 @@ const strToMarkdown = <T>(value: string) => {
     frontMatter = yaml.load(firstChild.value) as T;
   } else {
     // Optional: You could leave this else block empty since frontMatter is already initialized as an empty object
-    frontMatter = T;
+    frontMatter = {} as T;
   }
   return { frontMatter };
 };

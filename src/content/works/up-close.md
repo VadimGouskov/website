@@ -1,4 +1,5 @@
 ---
+slug: "up-close"
 title: "Up Close: This is what our world is made off"
 description: This is the description
 layout: cover-left

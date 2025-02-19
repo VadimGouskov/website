@@ -1,10 +1,7 @@
 import { Work } from "@/app/work/repo/types";
 
-export interface HomeIndexPage {
-  meta: Meta;
-}
+export interface HomeIndexContent extends PageContent {}
 
-export interface HomeData {
-  meta: Meta;
+export interface HomeData extends PageData {
   works: Work[];
 }
