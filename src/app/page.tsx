@@ -24,25 +24,25 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const workPagePath = "/work";
+const seriesPagePath = "/work";
 
 export default async function Home() {
   const data = await getHomeData();
 
   return (
     <Container className="mt-4">
-      {data.series.map((work, index) => (
-        <section className="mt-10" key={`work-${work.title}-${index}`}>
+      {data.series.map((series, index) => (
+        <section className="mt-10" key={`series-${series.title}-${index}`}>
           <GridSection
-            layout={work.layout}
+            layout={series.layout}
             highlightSlot={
               <CardBackdrop>
-                <Link href={`${workPagePath}/${work.slug}`}>
+                <Link href={`${seriesPagePath}/${series.slug}`}>
                   <LargeCard
-                    title={work.title}
+                    title={series.title}
                     image={{
-                      src: work.coverImage.src,
-                      alt: work.coverImage.alt,
+                      src: series.coverImage.src,
+                      alt: series.coverImage.alt,
                     }}
                   />
                 </Link>
@@ -50,7 +50,7 @@ export default async function Home() {
             }
           >
             <div className="flex flex-col gap-2 h-full aspect-square md:aspect-auto">
-              {work.featuredImages.map((tile, imageIndex) => (
+              {series.featuredImages.map((tile, imageIndex) => (
                 <div key={`image-${imageIndex}`} className="flex-auto">
                   <CardBackdrop>
                     <ImageTile
@@ -63,7 +63,7 @@ export default async function Home() {
                 </div>
               ))}
               <div className="">
-                <Link href={`${workPagePath}/${work.slug}`}>
+                <Link href={`${seriesPagePath}/${series.slug}`}>
                   <Tile>
                     <div className="p-4 flex justify-center items-center text-xl">
                       <span>Learn more</span>

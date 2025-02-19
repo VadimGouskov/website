@@ -3,7 +3,7 @@ import { loadFile } from "@/lib/file-loader/loadFile";
 import { projectBasePath } from "@/lib/file-loader/project-base-path";
 import { parseFrontMatter } from "@/lib/markdown-parser/parse";
 import { HomeData, HomeIndexContent } from "./types";
-import { Series, SeriesContent } from "@/app/work/repo/types";
+import { SeriesContent } from "@/app/work/repo/types";
 
 const homePath = projectBasePath + "/content/home";
 const seriesPath = projectBasePath + "/content/series";

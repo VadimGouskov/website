@@ -9,19 +9,19 @@ type WorkPageProps = {
 };
 
 export async function generateStaticParams() {
-  const allWorks = await getAllSeries();
+  const allSeries = await getAllSeries();
 
-  return allWorks.map((work) => ({
-    slug: work.slug,
+  return allSeries.map((series) => ({
+    slug: series.slug,
   }));
 }
 
 const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
   const { slug } = await params;
 
-  const work = await getSeries(slug);
+  const series = await getSeries(slug);
 
-  if (!work) {
+  if (!series) {
     return (
       <Container>
         <div>
@@ -40,12 +40,12 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
   return (
     <main>
       <Container>
-        {work.content && (
+        {series.content && (
           <Markdown>
             <div
               className="markdown"
               dangerouslySetInnerHTML={{
-                __html: work.content,
+                __html: series.content,
               }}
             ></div>
           </Markdown>
