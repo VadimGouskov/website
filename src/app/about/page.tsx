@@ -2,11 +2,11 @@ import * as React from "react";
 import { Container } from "../components/Container";
 import { getAbout } from "./repo/getAbout";
 
-import Image from "next/image";
+import NextImage from "next/image";
 
 type AboutProps = {};
 
-const About: React.FC<AboutProps> = async (props) => {
+const About: React.FC<AboutProps> = async () => {
   const data = await getAbout();
 
   if (!data) {
@@ -24,7 +24,7 @@ const About: React.FC<AboutProps> = async (props) => {
           <div className="flex flex-col md:flex-row gap-2">
             <div className="md:basis-1/3">
               <div className="aspect-square md:aspect-2/3 relative">
-                <Image
+                <NextImage
                   className="md:object-contain object-top"
                   fill
                   src={data.image.src}

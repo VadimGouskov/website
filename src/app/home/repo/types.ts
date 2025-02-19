@@ -1,3 +1,4 @@
+import { PageContent, PageData } from "@/app/types";
 import { Series } from "@/app/work/repo/types";
 
 export interface HomeIndexContent extends PageContent {}

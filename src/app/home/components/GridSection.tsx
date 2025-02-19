@@ -1,3 +1,4 @@
+import { Layout } from "@/app/work/repo/types";
 import * as React from "react";
 
 type GridSectionProps = {

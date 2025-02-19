@@ -9,12 +9,12 @@ import { Card } from "@/app/components/Card/Card";
 import { GridSection } from "@/app/home/components/GridSection";
 import { LargeCard } from "@/app/components/Card/LargeCard";
 import { ImageTile } from "@/app/components/Tile/ImageTile";
-import Image from "next/image";
+import NextImage from "next/image";
 import { Tile } from "@/app/components/Tile/Tile";
 import { Table } from "@/app/components/Table/Table";
 
 type WorkPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
@@ -128,7 +128,7 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
                 <div className="md:basis-1/3">
                   {series.images.map((image, index) => (
                     <div key={`about-image-${index}`} className="relative mb-2">
-                      <Image
+                      <NextImage
                         src={image.src}
                         alt={image.alt}
                         width={0}

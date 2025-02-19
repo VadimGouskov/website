@@ -1,21 +1,21 @@
-interface Image {
+export interface Image {
   src: string;
   alt: string;
 }
 
-interface Meta {
+export interface Meta {
   title: string;
   description: string;
   openGraphImages: Image[];
   ogUrl: string;
 }
 
-interface PageContent {
+export interface PageContent {
   slug: string;
   meta: Meta;
 }
 
-interface PageData {
+export interface PageData {
   slug: string;
   meta: Meta;
 }

@@ -1,5 +1,5 @@
 import { projectBasePath } from "@/lib/file-loader/project-base-path";
-import { Series, SeriesContent, SeriesData } from "./types";
+import { Series, SeriesContent } from "./types";
 import { parseFrontMatter } from "@/lib/markdown-parser/parse";
 import { loadDir } from "@/lib/file-loader/loadDir";
 import { loadFile } from "@/lib/file-loader/loadFile";

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Image from "next/image";
+import NextImage from "next/image";
 
 type LargeCardProps = {
   title?: string;
@@ -19,7 +19,7 @@ export const LargeCard: React.FC<LargeCardProps> = ({ image, title }) => {
           </div>
         )}
         <div className="relative h-full ">
-          <Image
+          <NextImage
             className="object-cover"
             fill
             src={image.src}

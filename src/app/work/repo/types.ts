@@ -1,4 +1,6 @@
-interface DetailsEntry {
+import { PageContent, PageData, Image } from "@/app/types";
+
+export interface DetailsEntry {
   label: string;
   value: string;
 }

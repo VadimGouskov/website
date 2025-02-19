@@ -1,6 +1,7 @@
 import { loadFile } from "@/lib/file-loader/loadFile";
 import { parseFrontMatter, parseMarkdown } from "@/lib/markdown-parser/parse";
 import { projectBasePath } from "@/lib/file-loader/project-base-path";
+import { AboutContent, AboutData } from "./types";
 
 const workPath = projectBasePath + "/content/about";
 

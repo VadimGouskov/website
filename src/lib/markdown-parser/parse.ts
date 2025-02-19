@@ -1,6 +1,6 @@
 import { fromMarkdown } from "mdast-util-from-markdown";
 import { frontmatterFromMarkdown } from "mdast-util-frontmatter";
-import { Options, micromark } from "micromark";
+import { micromark } from "micromark";
 import { frontmatter, frontmatterHtml } from "micromark-extension-frontmatter";
 import yaml from "js-yaml";
 
