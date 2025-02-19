@@ -5,6 +5,7 @@ import { Container } from "@/app/components/Container";
 import Link from "next/link";
 import { Markdown } from "@/app/components/Markdown/Markdown";
 import { getAllWorks } from "../repo/getAllWorks";
+import { Card } from "@/app/components/Card/Card";
 type WorkPageProps = {
   params: { slug: string };
 };
@@ -44,7 +45,13 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
     <main>
       <Container>
         {seriesWorks.map((work, index) => (
-          <div key={work.slug}>{work.title}</div>
+          <div key={work.slug}>
+            <Card
+              image={work.images[0]}
+              title={work.title}
+              description={work.description}
+            />
+          </div>
         ))}
 
         {series.content && (
