@@ -16,6 +16,16 @@ images:
     alt: "No Data: Algorithmic sculptures"
   - src: /no-data/no-data-2.jpg
     alt: "No Data: Algorithmic sculptures"
+
+details:
+  - label: "Year"
+    value: "2021"
+  - label: "Medium"
+    value: "Digital"
+  - label: "Dimensions"
+    value: "Variable"
+  - label: "Availability"
+    value: "Available"
 ---
 
 # No Data

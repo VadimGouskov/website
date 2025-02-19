@@ -1,3 +1,8 @@
+interface DetailsEntry {
+  label: string;
+  value: string;
+}
+
 export interface Series {
   slug: string;
   title: string;
@@ -7,6 +12,7 @@ export interface Series {
   images: Image[];
   layout?: Layout;
   content?: string;
+  details: DetailsEntry[];
 }
 
 export interface SeriesContent extends Series, PageContent {}

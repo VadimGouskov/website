@@ -11,6 +11,7 @@ import { LargeCard } from "@/app/components/Card/LargeCard";
 import { ImageTile } from "@/app/components/Tile/ImageTile";
 import Image from "next/image";
 import { Tile } from "@/app/components/Tile/Tile";
+import { Table } from "@/app/components/Table/Table";
 
 type WorkPageProps = {
   params: { slug: string };
@@ -51,24 +52,24 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
     <main className="mt-2">
       <Container>
         <div className="flex flex-col md:flex-row gap-1">
-          <Link href={"#"}>
+          <Link href={"/"}>
             <Tile>
               <div className="p-2">Back</div>
             </Tile>
           </Link>
-          <Link className="flex-auto" href={"#"}>
+          <Link className="flex-auto" href={"#about"}>
             <Tile>
               <div className="p-2">About</div>
             </Tile>
           </Link>
-          <Link className="flex-auto" href={"#"}>
+          <Link className="flex-auto" href={"#details"}>
             <Tile>
               <div className="p-2">Details</div>
             </Tile>
           </Link>
         </div>
 
-        <section className="mt-8">
+        <section id="works" className="mt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-2">
             {seriesWorks.map((work, index) => (
               <div key={`${work.slug}-${index}`}>
@@ -110,7 +111,7 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
         </section>
 
         {series.content && (
-          <section className="mt-32">
+          <section id="about" className="mt-32">
             <div className="flex flex-col md:flex-row-reverse gap-2">
               <div className="md:basis-2/3">
                 <Markdown>
@@ -140,6 +141,17 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
                 </div>
               )}
             </div>
+          </section>
+        )}
+
+        {series.details && (
+          <section id="details">
+            <Table
+              data={series.details.map((detail) => ({
+                label: detail.label,
+                value: detail.value,
+              }))}
+            />
           </section>
         )}
       </Container>
