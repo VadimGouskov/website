@@ -30,9 +30,9 @@ export default async function Home() {
   const data = await getHomeData();
 
   return (
-    <Container className="mt-4">
+    <Container>
       {data.series.map((series, index) => (
-        <section className="mt-10" key={`series-${series.title}-${index}`}>
+        <section className="mt-8" key={`series-${series.title}-${index}`}>
           <GridSection
             layout={series.layout}
             highlightSlot={
