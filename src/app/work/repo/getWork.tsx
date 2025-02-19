@@ -1,11 +1,19 @@
 import { loadFile } from "@/lib/file-loader/loadFile";
 import { parseFrontMatter, parseMarkdown } from "@/lib/markdown-parser/parse";
 import { WorkData, WorkContent, Work } from "./types";
+import { projectBasePath } from "@/lib/file-loader/project-base-path";
 
-export const getWork = async (slug: string): Promise<Work> => {
-  const file = await loadFile(`src/data/works/${slug}.md`);
+const workPath = projectBasePath + "/content/works";
+
+export const getWork = async (slug: string): Promise<Work | null> => {
+  const file = await loadFile(`${workPath}/${slug}.md`);
+
+  if (!file) {
+    return null;
+  }
+
   const frontmatter = await parseFrontMatter<WorkContent>(file);
-  const content = await parseMarkdown(file);
+  const content = parseMarkdown(file);
 
   return { ...frontmatter, content };
 };

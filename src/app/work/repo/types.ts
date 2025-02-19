@@ -1,4 +1,5 @@
 export interface Work {
+  slug: string;
   title: string;
   description: string;
   coverImage: Image;
@@ -12,7 +13,7 @@ export interface WorkContent extends Work, PageContent {}
 
 export interface WorkData extends PageData {
   works: Work[];
-  content: string;
+  content?: string;
 }
 
 export type Layout = "cover-right" | "cover-left";
