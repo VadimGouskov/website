@@ -8,6 +8,7 @@ import { ImageTile } from "./components/Tile/ImageTile";
 import { Tile } from "./components/Tile/Tile";
 import { getHomeData } from "./home/repo/getHomeData";
 import { Metadata, ResolvingMetadata } from "next";
+import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getHomeData();
@@ -23,6 +24,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const workPagePath = "/work";
+
 export default async function Home() {
   const data = await getHomeData();
 
@@ -34,13 +37,15 @@ export default async function Home() {
             layout={work.layout}
             highlightSlot={
               <CardBackdrop>
-                <LargeCard
-                  title={work.title}
-                  image={{
-                    src: work.coverImage.src,
-                    alt: work.coverImage.alt,
-                  }}
-                />
+                <Link href={`${workPagePath}/${work.slug}`}>
+                  <LargeCard
+                    title={work.title}
+                    image={{
+                      src: work.coverImage.src,
+                      alt: work.coverImage.alt,
+                    }}
+                  />
+                </Link>
               </CardBackdrop>
             }
           >
@@ -58,11 +63,13 @@ export default async function Home() {
                 </div>
               ))}
               <div className="">
-                <Tile>
-                  <div className="p-4 flex justify-center items-center text-xl">
-                    <span>Learn more</span>
-                  </div>
-                </Tile>
+                <Link href={`${workPagePath}/${work.slug}`}>
+                  <Tile>
+                    <div className="p-4 flex justify-center items-center text-xl">
+                      <span>Learn more</span>
+                    </div>
+                  </Tile>
+                </Link>
               </div>
             </div>
           </GridSection>
