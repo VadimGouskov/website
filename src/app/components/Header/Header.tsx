@@ -9,8 +9,8 @@ export const Header: React.FC<HeaderProps> = () => {
     <Container>
       <div className="flex mt-2 gap-2">
         <div className="vg-border vg-rounded p-4  bg-white flex-auto ">
-          <Link href={"/"} className="text-xl font-thin leading-none">
-            VADIM GOUSKOV
+          <Link href={"/"} className="text-xl font-thin">
+            <div className="leading-none">VADIM GOUSKOV</div>
           </Link>
         </div>
         <Tile>
