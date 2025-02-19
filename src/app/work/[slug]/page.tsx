@@ -4,6 +4,7 @@ import { getSeries } from "../repo/getSeries";
 import { Container } from "@/app/components/Container";
 import Link from "next/link";
 import { Markdown } from "@/app/components/Markdown/Markdown";
+import { getAllWorks } from "../repo/getAllWorks";
 type WorkPageProps = {
   params: { slug: string };
 };
@@ -37,9 +38,15 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
     );
   }
 
+  const seriesWorks = await getAllWorks(series.slug);
+
   return (
     <main>
       <Container>
+        {seriesWorks.map((work, index) => (
+          <div key={work.slug}>{work.title}</div>
+        ))}
+
         {series.content && (
           <Markdown>
             <div

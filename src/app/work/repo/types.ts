@@ -16,4 +16,13 @@ export interface SeriesData extends PageData {
   content?: string;
 }
 
+export interface Work {
+  slug: string;
+  title: string;
+  description: string;
+  images: Image[];
+}
+
+export interface WorkContent extends Work, PageContent {}
+
 export type Layout = "cover-right" | "cover-left";
