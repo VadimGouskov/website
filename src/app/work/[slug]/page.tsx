@@ -6,10 +6,7 @@ import Link from "next/link";
 import { Markdown } from "@/app/components/Markdown/Markdown";
 import { getAllWorks } from "../repo/getAllWorks";
 import { Card } from "@/app/components/Card/Card";
-import {
-  GridSection,
-  highlightSlotSizes,
-} from "@/app/home/components/GridSection";
+import { GridSection } from "@/app/home/components/GridSection";
 import { LargeCard } from "@/app/components/Card/LargeCard";
 import { ImageTile } from "@/app/components/Tile/ImageTile";
 import NextImage from "next/image";

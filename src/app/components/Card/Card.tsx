@@ -1,6 +1,5 @@
 import * as React from "react";
 import NextImage from "next/image";
-import { Image } from "@/app/types";
 
 type CardProps = {
   image?: React.ComponentProps<typeof NextImage>;
