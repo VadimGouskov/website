@@ -6,12 +6,16 @@ import Link from "next/link";
 import { Markdown } from "@/app/components/Markdown/Markdown";
 import { getAllWorks } from "../repo/getAllWorks";
 import { Card } from "@/app/components/Card/Card";
-import { GridSection } from "@/app/home/components/GridSection";
+import {
+  GridSection,
+  highlightSlotSizes,
+} from "@/app/home/components/GridSection";
 import { LargeCard } from "@/app/components/Card/LargeCard";
 import { ImageTile } from "@/app/components/Tile/ImageTile";
 import NextImage from "next/image";
 import { Tile } from "@/app/components/Tile/Tile";
 import { Table } from "@/app/components/Table/Table";
+import { buildImageSizes } from "@/lib/image-optimization/build-image-sizes";
 
 type WorkPageProps = {
   params: Promise<{ slug: string }>;
@@ -74,7 +78,14 @@ const SeriesContent: React.FC<WorkPageProps> = async ({ params }) => {
             {seriesWorks.map((work, index) => (
               <div key={`${work.slug}-${index}`}>
                 <Card
-                  image={work.images[0]}
+                  image={{
+                    ...work.images[0],
+                    sizes: buildImageSizes({
+                      md: "33vw",
+                      "2xl": "20vw",
+                      default: "100vw",
+                    }),
+                  }}
                   title={work.title}
                   description={work.description}
                 />

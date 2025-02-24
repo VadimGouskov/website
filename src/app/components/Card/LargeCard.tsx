@@ -3,10 +3,7 @@ import NextImage from "next/image";
 
 type LargeCardProps = {
   title?: string;
-  image: {
-    src: string;
-    alt: string;
-  };
+  image: React.ComponentProps<typeof NextImage>;
 };
 
 export const LargeCard: React.FC<LargeCardProps> = ({ image, title }) => {
@@ -19,12 +16,7 @@ export const LargeCard: React.FC<LargeCardProps> = ({ image, title }) => {
           </div>
         )}
         <div className="relative h-full ">
-          <NextImage
-            className="object-cover"
-            fill
-            src={image.src}
-            alt={image.alt}
-          />
+          <NextImage className="object-cover" fill {...image} />
         </div>
       </div>
     </div>

@@ -1,7 +1,11 @@
 import * as React from "react";
 import { Container } from "./components/Container";
 
-import { GridSection } from "./home/components/GridSection";
+import {
+  GridSection,
+  childrenSlotSizes,
+  highlightSlotSizes,
+} from "./home/components/GridSection";
 import { CardBackdrop } from "./components/Card/CardBackdrop";
 import { LargeCard } from "./components/Card/LargeCard";
 import { ImageTile } from "./components/Tile/ImageTile";
@@ -43,6 +47,8 @@ export default async function Home() {
                     image={{
                       src: series.coverImage.src,
                       alt: series.coverImage.alt,
+                      sizes: highlightSlotSizes,
+                      priority: true,
                     }}
                   />
                 </Link>
@@ -57,6 +63,8 @@ export default async function Home() {
                       image={{
                         src: tile.src,
                         alt: tile.alt,
+                        sizes: childrenSlotSizes,
+                        priority: true,
                       }}
                     />
                   </CardBackdrop>

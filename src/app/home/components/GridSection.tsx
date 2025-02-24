@@ -1,5 +1,16 @@
 import { Layout } from "@/app/work/repo/types";
+import { buildImageSizes } from "@/lib/image-optimization/build-image-sizes";
 import * as React from "react";
+
+export const highlightSlotSizes = buildImageSizes({
+  md: "66vw",
+  default: "100vw",
+});
+
+export const childrenSlotSizes = buildImageSizes({
+  md: "33vw",
+  default: "100vw",
+});
 
 type GridSectionProps = {
   highlightSlot?: React.ReactNode;
