@@ -14,9 +14,11 @@ export const Header: React.FC<HeaderProps> = () => {
           </Link>
         </div>
         <Tile>
-          <div className="p-2 h-full flex justify-center items-center">
-            Contact
-          </div>
+          <Link href={"/contact"}>
+            <div className="p-2 h-full flex justify-center items-center">
+              Contact
+            </div>
+          </Link>
         </Tile>
       </div>
     </Container>
